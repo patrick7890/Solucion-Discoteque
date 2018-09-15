@@ -1,4 +1,4 @@
-﻿namespace Discoteque
+﻿namespace discoteque
 {
     partial class Form1
     {
@@ -33,7 +33,7 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(74, 99);
+            this.reportViewer1.Location = new System.Drawing.Point(76, 60);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(396, 246);

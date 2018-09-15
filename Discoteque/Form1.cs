@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Discoteque
+namespace discoteque
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {

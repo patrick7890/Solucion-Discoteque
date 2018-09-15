@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Discoteque.Properties
+namespace discoteque.Properties
 {
 
 
