@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace discoteque
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class Form1 :MetroFramework.Forms.MetroForm
     {
         public Form1()
         {
