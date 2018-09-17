@@ -75,6 +75,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ProductoSevice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\UsuarioService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +115,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.ActualizarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.buscarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.IngresarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\ProductoWS.wsdl" />
+    <None Include="Connected Services\ProductoSevice\ProductoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UsuarioService\discoteque.UsuarioService.LoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -138,6 +159,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ProductoSevice\configuration91.svcinfo" />
+    <None Include="Connected Services\ProductoSevice\configuration.svcinfo" />
+    <None Include="Connected Services\ProductoSevice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -156,6 +183,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ProductoSevice\" />
     <WCFMetadataStorage Include="Connected Services\UsuarioService\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
