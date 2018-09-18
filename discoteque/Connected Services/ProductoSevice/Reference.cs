@@ -25,15 +25,6 @@ namespace discoteque.ProductoSevice {
         System.Threading.Tasks.Task<discoteque.ProductoSevice.listarResponse> listarAsync(discoteque.ProductoSevice.listarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/ProductoWS/IngresarProductoRequest", ReplyAction="http://webservice/ProductoWS/IngresarProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        discoteque.ProductoSevice.IngresarProductoResponse IngresarProducto(discoteque.ProductoSevice.IngresarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/ProductoWS/IngresarProductoRequest", ReplyAction="http://webservice/ProductoWS/IngresarProductoResponse")]
-        System.Threading.Tasks.Task<discoteque.ProductoSevice.IngresarProductoResponse> IngresarProductoAsync(discoteque.ProductoSevice.IngresarProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice/ProductoWS/buscarProductoRequest", ReplyAction="http://webservice/ProductoWS/buscarProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -59,10 +50,19 @@ namespace discoteque.ProductoSevice {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice/ProductoWS/ActualizarRequest", ReplyAction="http://webservice/ProductoWS/ActualizarResponse")]
         System.Threading.Tasks.Task<discoteque.ProductoSevice.ActualizarResponse> ActualizarAsync(discoteque.ProductoSevice.ActualizarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/ProductoWS/IngresarProductoRequest", ReplyAction="http://webservice/ProductoWS/IngresarProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        discoteque.ProductoSevice.IngresarProductoResponse IngresarProducto(discoteque.ProductoSevice.IngresarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/ProductoWS/IngresarProductoRequest", ReplyAction="http://webservice/ProductoWS/IngresarProductoResponse")]
+        System.Threading.Tasks.Task<discoteque.ProductoSevice.IngresarProductoResponse> IngresarProductoAsync(discoteque.ProductoSevice.IngresarProductoRequest request);
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -85,7 +85,7 @@ namespace discoteque.ProductoSevice {
         
         private tipoproducto tipoproductoField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("comandaProductos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
         public comandaProducto[] comandaProductos {
             get {
@@ -97,7 +97,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public sbyte enVenta {
             get {
@@ -109,7 +109,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int idproducto {
             get {
@@ -121,7 +121,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool idproductoSpecified {
             get {
@@ -133,7 +133,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public string nombreProducto {
             get {
@@ -145,7 +145,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int precio {
             get {
@@ -157,7 +157,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int stock {
             get {
@@ -169,7 +169,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public tipoproducto tipoproducto {
             get {
@@ -191,8 +191,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -205,7 +205,7 @@ namespace discoteque.ProductoSevice {
         
         private producto productoField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public comanda comanda {
             get {
@@ -217,7 +217,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public comandaProductoId id {
             get {
@@ -229,7 +229,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public producto producto {
             get {
@@ -251,8 +251,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -269,7 +269,7 @@ namespace discoteque.ProductoSevice {
         
         private int totalcomandaField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public atencion atencion {
             get {
@@ -281,7 +281,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("comandaProductos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public comandaProducto[] comandaProductos {
             get {
@@ -293,7 +293,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int idcomanda {
             get {
@@ -305,7 +305,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool idcomandaSpecified {
             get {
@@ -317,7 +317,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int totalcomanda {
             get {
@@ -339,8 +339,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -365,7 +365,7 @@ namespace discoteque.ProductoSevice {
         
         private usuario usuarioField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("comandas", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
         public comanda[] comandas {
             get {
@@ -377,7 +377,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public sbyte faturada {
             get {
@@ -389,7 +389,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public System.DateTime fecha {
             get {
@@ -401,7 +401,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool fechaSpecified {
             get {
@@ -413,7 +413,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public atencionId id {
             get {
@@ -425,7 +425,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int propina {
             get {
@@ -437,7 +437,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public tiposala tiposala {
             get {
@@ -449,7 +449,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int totalatencion {
             get {
@@ -461,7 +461,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public usuario usuario {
             get {
@@ -483,8 +483,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -495,7 +495,7 @@ namespace discoteque.ProductoSevice {
         
         private int usuarioIdusuarioField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int idatencion {
             get {
@@ -507,7 +507,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int usuarioIdusuario {
             get {
@@ -529,8 +529,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -545,7 +545,7 @@ namespace discoteque.ProductoSevice {
         
         private producto[] productosField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string descripcionTipoP {
             get {
@@ -557,7 +557,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int idtipoProducto {
             get {
@@ -569,7 +569,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool idtipoProductoSpecified {
             get {
@@ -581,7 +581,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("productos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public producto[] productos {
             get {
@@ -603,8 +603,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -615,7 +615,7 @@ namespace discoteque.ProductoSevice {
         
         private int productoIdproductoField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int comandaIdcomanda {
             get {
@@ -627,7 +627,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int productoIdproducto {
             get {
@@ -649,8 +649,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -665,7 +665,7 @@ namespace discoteque.ProductoSevice {
         
         private usuario[] usuariosField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string descripciontipoU {
             get {
@@ -677,7 +677,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int idtipoUsuario {
             get {
@@ -689,7 +689,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool idtipoUsuarioSpecified {
             get {
@@ -701,7 +701,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("usuarios", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public usuario[] usuarios {
             get {
@@ -723,8 +723,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -747,7 +747,7 @@ namespace discoteque.ProductoSevice {
         
         private tipousuario tipousuarioField;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public sbyte activo {
             get {
@@ -759,7 +759,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("atencions", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public atencion[] atencions {
             get {
@@ -771,7 +771,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string cuentausuario {
             get {
@@ -783,7 +783,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int idusuario {
             get {
@@ -795,7 +795,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool idusuarioSpecified {
             get {
@@ -807,7 +807,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombreusuario {
             get {
@@ -819,7 +819,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string passusuario {
             get {
@@ -831,7 +831,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public tipousuario tipousuario {
             get {
@@ -853,8 +853,8 @@ namespace discoteque.ProductoSevice {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -869,7 +869,7 @@ namespace discoteque.ProductoSevice {
         
         private bool idtipoSalaFieldSpecified;
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("atencions", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
         public atencion[] atencions {
             get {
@@ -881,7 +881,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string desctipoSala {
             get {
@@ -893,7 +893,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int idtipoSala {
             get {
@@ -905,7 +905,7 @@ namespace discoteque.ProductoSevice {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool idtipoSalaSpecified {
             get {
@@ -958,6 +958,106 @@ namespace discoteque.ProductoSevice {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarProducto", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class buscarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public buscarProductoRequest() {
+        }
+        
+        public buscarProductoRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarProductoResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class buscarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public discoteque.ProductoSevice.producto @return;
+        
+        public buscarProductoResponse() {
+        }
+        
+        public buscarProductoResponse(discoteque.ProductoSevice.producto @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminar", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class eliminarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarRequest() {
+        }
+        
+        public eliminarRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class eliminarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarResponse() {
+        }
+        
+        public eliminarResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Actualizar", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class ActualizarRequest {
+        
+        public ActualizarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class ActualizarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public ActualizarResponse() {
+        }
+        
+        public ActualizarResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="IngresarProducto", WrapperNamespace="http://webservice/", IsWrapped=true)]
     public partial class IngresarProductoRequest {
         
@@ -996,112 +1096,12 @@ namespace discoteque.ProductoSevice {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
+        public bool @return;
         
         public IngresarProductoResponse() {
         }
         
-        public IngresarProductoResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarProducto", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class buscarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public buscarProductoRequest() {
-        }
-        
-        public buscarProductoRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarProductoResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class buscarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public buscarProductoResponse() {
-        }
-        
-        public buscarProductoResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminar", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class eliminarRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarRequest() {
-        }
-        
-        public eliminarRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class eliminarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public eliminarResponse() {
-        }
-        
-        public eliminarResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Actualizar", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class ActualizarRequest {
-        
-        public ActualizarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class ActualizarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public ActualizarResponse() {
-        }
-        
-        public ActualizarResponse(string @return) {
+        public IngresarProductoResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1155,40 +1155,11 @@ namespace discoteque.ProductoSevice {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        discoteque.ProductoSevice.IngresarProductoResponse discoteque.ProductoSevice.ProductoWS.IngresarProducto(discoteque.ProductoSevice.IngresarProductoRequest request) {
-            return base.Channel.IngresarProducto(request);
-        }
-        
-        public string IngresarProducto(string nombre, int precio, int stock, int tipo) {
-            discoteque.ProductoSevice.IngresarProductoRequest inValue = new discoteque.ProductoSevice.IngresarProductoRequest();
-            inValue.nombre = nombre;
-            inValue.precio = precio;
-            inValue.stock = stock;
-            inValue.tipo = tipo;
-            discoteque.ProductoSevice.IngresarProductoResponse retVal = ((discoteque.ProductoSevice.ProductoWS)(this)).IngresarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<discoteque.ProductoSevice.IngresarProductoResponse> discoteque.ProductoSevice.ProductoWS.IngresarProductoAsync(discoteque.ProductoSevice.IngresarProductoRequest request) {
-            return base.Channel.IngresarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<discoteque.ProductoSevice.IngresarProductoResponse> IngresarProductoAsync(string nombre, int precio, int stock, int tipo) {
-            discoteque.ProductoSevice.IngresarProductoRequest inValue = new discoteque.ProductoSevice.IngresarProductoRequest();
-            inValue.nombre = nombre;
-            inValue.precio = precio;
-            inValue.stock = stock;
-            inValue.tipo = tipo;
-            return ((discoteque.ProductoSevice.ProductoWS)(this)).IngresarProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         discoteque.ProductoSevice.buscarProductoResponse discoteque.ProductoSevice.ProductoWS.buscarProducto(discoteque.ProductoSevice.buscarProductoRequest request) {
             return base.Channel.buscarProducto(request);
         }
         
-        public string buscarProducto(int id) {
+        public discoteque.ProductoSevice.producto buscarProducto(int id) {
             discoteque.ProductoSevice.buscarProductoRequest inValue = new discoteque.ProductoSevice.buscarProductoRequest();
             inValue.id = id;
             discoteque.ProductoSevice.buscarProductoResponse retVal = ((discoteque.ProductoSevice.ProductoWS)(this)).buscarProducto(inValue);
@@ -1211,7 +1182,7 @@ namespace discoteque.ProductoSevice {
             return base.Channel.eliminar(request);
         }
         
-        public string eliminar(int id) {
+        public bool eliminar(int id) {
             discoteque.ProductoSevice.eliminarRequest inValue = new discoteque.ProductoSevice.eliminarRequest();
             inValue.id = id;
             discoteque.ProductoSevice.eliminarResponse retVal = ((discoteque.ProductoSevice.ProductoWS)(this)).eliminar(inValue);
@@ -1248,6 +1219,35 @@ namespace discoteque.ProductoSevice {
         public System.Threading.Tasks.Task<discoteque.ProductoSevice.ActualizarResponse> ActualizarAsync() {
             discoteque.ProductoSevice.ActualizarRequest inValue = new discoteque.ProductoSevice.ActualizarRequest();
             return ((discoteque.ProductoSevice.ProductoWS)(this)).ActualizarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        discoteque.ProductoSevice.IngresarProductoResponse discoteque.ProductoSevice.ProductoWS.IngresarProducto(discoteque.ProductoSevice.IngresarProductoRequest request) {
+            return base.Channel.IngresarProducto(request);
+        }
+        
+        public bool IngresarProducto(string nombre, int precio, int stock, int tipo) {
+            discoteque.ProductoSevice.IngresarProductoRequest inValue = new discoteque.ProductoSevice.IngresarProductoRequest();
+            inValue.nombre = nombre;
+            inValue.precio = precio;
+            inValue.stock = stock;
+            inValue.tipo = tipo;
+            discoteque.ProductoSevice.IngresarProductoResponse retVal = ((discoteque.ProductoSevice.ProductoWS)(this)).IngresarProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<discoteque.ProductoSevice.IngresarProductoResponse> discoteque.ProductoSevice.ProductoWS.IngresarProductoAsync(discoteque.ProductoSevice.IngresarProductoRequest request) {
+            return base.Channel.IngresarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<discoteque.ProductoSevice.IngresarProductoResponse> IngresarProductoAsync(string nombre, int precio, int stock, int tipo) {
+            discoteque.ProductoSevice.IngresarProductoRequest inValue = new discoteque.ProductoSevice.IngresarProductoRequest();
+            inValue.nombre = nombre;
+            inValue.precio = precio;
+            inValue.stock = stock;
+            inValue.tipo = tipo;
+            return ((discoteque.ProductoSevice.ProductoWS)(this)).IngresarProductoAsync(inValue);
         }
     }
 }

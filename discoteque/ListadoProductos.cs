@@ -12,6 +12,7 @@ namespace discoteque
 {
     public partial class ListadoProductos : MetroFramework.Forms.MetroForm
     {
+       
         public ListadoProductos()
         {
             InitializeComponent();
@@ -19,15 +20,10 @@ namespace discoteque
 
         private void ListadoProductos_Load(object sender, EventArgs e)
         {
-          
-        }
-
-
-
-
-        private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.discotequeDataSet.producto);
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.discotequeDataSet.producto);
         }
     }
 }

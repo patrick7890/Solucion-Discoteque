@@ -30,24 +30,87 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.listarResponseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
+            this.idproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoProductoidtipoProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listarResponseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.listarResponseBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 110);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idproductoDataGridViewTextBoxColumn,
+            this.nombreProductoDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn,
+            this.stockDataGridViewTextBoxColumn,
+            this.enVentaDataGridViewTextBoxColumn,
+            this.tipoProductoidtipoProductoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.productoBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(23, 84);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(475, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(652, 252);
             this.dataGridView1.TabIndex = 0;
             // 
-            // listarResponseBindingSource
+            // discotequeDataSet
             // 
-            this.listarResponseBindingSource.DataSource = typeof(discoteque.ProductoSevice.listarResponse);
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "producto";
+            this.productoBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // idproductoDataGridViewTextBoxColumn
+            // 
+            this.idproductoDataGridViewTextBoxColumn.DataPropertyName = "idproducto";
+            this.idproductoDataGridViewTextBoxColumn.HeaderText = "idproducto";
+            this.idproductoDataGridViewTextBoxColumn.Name = "idproductoDataGridViewTextBoxColumn";
+            this.idproductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreProductoDataGridViewTextBoxColumn
+            // 
+            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "nombreProducto";
+            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "nombreProducto";
+            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // stockDataGridViewTextBoxColumn
+            // 
+            this.stockDataGridViewTextBoxColumn.DataPropertyName = "stock";
+            this.stockDataGridViewTextBoxColumn.HeaderText = "stock";
+            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            // 
+            // enVentaDataGridViewTextBoxColumn
+            // 
+            this.enVentaDataGridViewTextBoxColumn.DataPropertyName = "enVenta";
+            this.enVentaDataGridViewTextBoxColumn.HeaderText = "enVenta";
+            this.enVentaDataGridViewTextBoxColumn.Name = "enVentaDataGridViewTextBoxColumn";
+            // 
+            // tipoProductoidtipoProductoDataGridViewTextBoxColumn
+            // 
+            this.tipoProductoidtipoProductoDataGridViewTextBoxColumn.DataPropertyName = "tipoProducto_idtipoProducto";
+            this.tipoProductoidtipoProductoDataGridViewTextBoxColumn.HeaderText = "tipoProducto_idtipoProducto";
+            this.tipoProductoidtipoProductoDataGridViewTextBoxColumn.Name = "tipoProductoidtipoProductoDataGridViewTextBoxColumn";
             // 
             // ListadoProductos
             // 
@@ -59,7 +122,8 @@
             this.Text = "ListadoProductos";
             this.Load += new System.EventHandler(this.ListadoProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listarResponseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -67,6 +131,14 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource listarResponseBindingSource;
+        private discotequeDataSet discotequeDataSet;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private discotequeDataSetTableAdapters.productoTableAdapter productoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idproductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoProductoidtipoProductoDataGridViewTextBoxColumn;
     }
 }
