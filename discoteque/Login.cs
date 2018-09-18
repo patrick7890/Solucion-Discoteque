@@ -21,5 +21,25 @@ namespace discoteque
         {
 
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            UsuarioService.UsuarioWSClient login = new UsuarioService.UsuarioWSClient();
+
+            Boolean logeado = login.Login(txtUsu.Text,txtPass.Text);
+
+            if (logeado)
+            {
+                this.Hide();
+                Form1 Form1 = new Form1();
+                Form1.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Usuario incorrecto");
+            }
+
+        }
     }
 }

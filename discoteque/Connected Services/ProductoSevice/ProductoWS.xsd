@@ -8,6 +8,8 @@
   <xs:element name="buscarProductoResponse" type="tns:buscarProductoResponse" />
   <xs:element name="eliminar" type="tns:eliminar" />
   <xs:element name="eliminarResponse" type="tns:eliminarResponse" />
+  <xs:element name="listar" type="tns:listar" />
+  <xs:element name="listarResponse" type="tns:listarResponse" />
   <xs:complexType name="buscarProducto">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -24,6 +26,96 @@
   <xs:complexType name="ActualizarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="comandaProductos" nillable="true" type="tns:comandaProducto" />
+      <xs:element name="enVenta" type="xs:byte" />
+      <xs:element minOccurs="0" name="idproducto" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreProducto" type="xs:string" />
+      <xs:element name="precio" type="xs:int" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoproducto" type="tns:tipoproducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comandaProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comanda" type="tns:comanda" />
+      <xs:element minOccurs="0" name="id" type="tns:comandaProductoId" />
+      <xs:element minOccurs="0" name="producto" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comanda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="atencion" type="tns:atencion" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="comandaProductos" nillable="true" type="tns:comandaProducto" />
+      <xs:element minOccurs="0" name="idcomanda" type="xs:int" />
+      <xs:element name="totalcomanda" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="atencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="comandas" nillable="true" type="tns:comanda" />
+      <xs:element name="faturada" type="xs:byte" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" type="tns:atencionId" />
+      <xs:element name="propina" type="xs:int" />
+      <xs:element minOccurs="0" name="tiposala" type="tns:tiposala" />
+      <xs:element name="totalatencion" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="atencionId">
+    <xs:sequence>
+      <xs:element name="idatencion" type="xs:int" />
+      <xs:element name="usuarioIdusuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tiposala">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="atencions" nillable="true" type="tns:atencion" />
+      <xs:element minOccurs="0" name="desctipoSala" type="xs:string" />
+      <xs:element minOccurs="0" name="idtipoSala" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:byte" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="atencions" nillable="true" type="tns:atencion" />
+      <xs:element minOccurs="0" name="cuentausuario" type="xs:string" />
+      <xs:element minOccurs="0" name="idusuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreusuario" type="xs:string" />
+      <xs:element minOccurs="0" name="passusuario" type="xs:string" />
+      <xs:element minOccurs="0" name="tipousuario" type="tns:tipousuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipousuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripciontipoU" type="xs:string" />
+      <xs:element minOccurs="0" name="idtipoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usuarios" nillable="true" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comandaProductoId">
+    <xs:sequence>
+      <xs:element name="comandaIdcomanda" type="xs:int" />
+      <xs:element name="productoIdproducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoproducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionTipoP" type="xs:string" />
+      <xs:element minOccurs="0" name="idtipoProducto" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="productos" nillable="true" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="IngresarProducto">

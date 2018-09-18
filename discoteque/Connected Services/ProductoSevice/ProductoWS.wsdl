@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/discoteque/ProductoWS?xsd=1" namespace="http://webservice/" />
     </xsd:schema>
   </types>
+  <message name="listar">
+    <part name="parameters" element="tns:listar" />
+  </message>
+  <message name="listarResponse">
+    <part name="parameters" element="tns:listarResponse" />
+  </message>
   <message name="IngresarProducto">
     <part name="parameters" element="tns:IngresarProducto" />
   </message>
@@ -30,6 +36,10 @@
     <part name="parameters" element="tns:ActualizarResponse" />
   </message>
   <portType name="ProductoWS">
+    <operation name="listar">
+      <input wsam:Action="http://webservice/ProductoWS/listarRequest" message="tns:listar" />
+      <output wsam:Action="http://webservice/ProductoWS/listarResponse" message="tns:listarResponse" />
+    </operation>
     <operation name="IngresarProducto">
       <input wsam:Action="http://webservice/ProductoWS/IngresarProductoRequest" message="tns:IngresarProducto" />
       <output wsam:Action="http://webservice/ProductoWS/IngresarProductoResponse" message="tns:IngresarProductoResponse" />
@@ -49,6 +59,15 @@
   </portType>
   <binding name="ProductoWSPortBinding" type="tns:ProductoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="IngresarProducto">
       <soap:operation soapAction="" />
       <input>
