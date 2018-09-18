@@ -61,6 +61,85 @@ namespace discoteque.ProductoSevice {
         System.Threading.Tasks.Task<discoteque.ProductoSevice.ActualizarResponse> ActualizarAsync(discoteque.ProductoSevice.ActualizarRequest request);
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class listarRequest {
+        
+        public listarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class listarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public listarResponse() {
+        }
+        
+        public listarResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IngresarProducto", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class IngresarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int precio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int stock;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int tipo;
+        
+        public IngresarProductoRequest() {
+        }
+        
+        public IngresarProductoRequest(string nombre, int precio, int stock, int tipo) {
+            this.nombre = nombre;
+            this.precio = precio;
+            this.stock = stock;
+            this.tipo = tipo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IngresarProductoResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
+    public partial class IngresarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public IngresarProductoResponse() {
+        }
+        
+        public IngresarProductoResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
     /// <comentarios/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
@@ -930,85 +1009,6 @@ namespace discoteque.ProductoSevice {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class listarRequest {
-        
-        public listarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class listarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public discoteque.ProductoSevice.producto[] @return;
-        
-        public listarResponse() {
-        }
-        
-        public listarResponse(discoteque.ProductoSevice.producto[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="IngresarProducto", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class IngresarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int precio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int stock;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int tipo;
-        
-        public IngresarProductoRequest() {
-        }
-        
-        public IngresarProductoRequest(string nombre, int precio, int stock, int tipo) {
-            this.nombre = nombre;
-            this.precio = precio;
-            this.stock = stock;
-            this.tipo = tipo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="IngresarProductoResponse", WrapperNamespace="http://webservice/", IsWrapped=true)]
-    public partial class IngresarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public IngresarProductoResponse() {
-        }
-        
-        public IngresarProductoResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="buscarProducto", WrapperNamespace="http://webservice/", IsWrapped=true)]
     public partial class buscarProductoRequest {
         
@@ -1032,12 +1032,12 @@ namespace discoteque.ProductoSevice {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
+        public discoteque.ProductoSevice.producto @return;
         
         public buscarProductoResponse() {
         }
         
-        public buscarProductoResponse(string @return) {
+        public buscarProductoResponse(discoteque.ProductoSevice.producto @return) {
             this.@return = @return;
         }
     }
@@ -1068,12 +1068,12 @@ namespace discoteque.ProductoSevice {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
+        public bool @return;
         
         public eliminarResponse() {
         }
         
-        public eliminarResponse(string @return) {
+        public eliminarResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1138,7 +1138,7 @@ namespace discoteque.ProductoSevice {
             return base.Channel.listar(request);
         }
         
-        public discoteque.ProductoSevice.producto[] listar() {
+        public string listar() {
             discoteque.ProductoSevice.listarRequest inValue = new discoteque.ProductoSevice.listarRequest();
             discoteque.ProductoSevice.listarResponse retVal = ((discoteque.ProductoSevice.ProductoWS)(this)).listar(inValue);
             return retVal.@return;
@@ -1159,7 +1159,7 @@ namespace discoteque.ProductoSevice {
             return base.Channel.IngresarProducto(request);
         }
         
-        public string IngresarProducto(string nombre, int precio, int stock, int tipo) {
+        public bool IngresarProducto(string nombre, int precio, int stock, int tipo) {
             discoteque.ProductoSevice.IngresarProductoRequest inValue = new discoteque.ProductoSevice.IngresarProductoRequest();
             inValue.nombre = nombre;
             inValue.precio = precio;
@@ -1188,7 +1188,7 @@ namespace discoteque.ProductoSevice {
             return base.Channel.buscarProducto(request);
         }
         
-        public string buscarProducto(int id) {
+        public discoteque.ProductoSevice.producto buscarProducto(int id) {
             discoteque.ProductoSevice.buscarProductoRequest inValue = new discoteque.ProductoSevice.buscarProductoRequest();
             inValue.id = id;
             discoteque.ProductoSevice.buscarProductoResponse retVal = ((discoteque.ProductoSevice.ProductoWS)(this)).buscarProducto(inValue);
@@ -1211,7 +1211,7 @@ namespace discoteque.ProductoSevice {
             return base.Channel.eliminar(request);
         }
         
-        public string eliminar(int id) {
+        public bool eliminar(int id) {
             discoteque.ProductoSevice.eliminarRequest inValue = new discoteque.ProductoSevice.eliminarRequest();
             inValue.id = id;
             discoteque.ProductoSevice.eliminarResponse retVal = ((discoteque.ProductoSevice.ProductoWS)(this)).eliminar(inValue);
