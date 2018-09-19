@@ -28,6 +28,8 @@ namespace discoteque
 
             Boolean logeado = login.Login(txtUsu.Text,txtPass.Text);
 
+            
+
             if (logeado)
             {
                 this.Hide();
