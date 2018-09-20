@@ -30,7 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnListarCritico = new MetroFramework.Controls.MetroButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -41,13 +42,26 @@
             this.btnProductoDeBaja = new MetroFramework.Controls.MetroButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnListarProducto = new MetroFramework.Controls.MetroButton();
-            this.panel1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "producto";
+            this.bindingSource1.DataSource = this.discotequeDataSet;
+            // 
+            // discotequeDataSet
+            // 
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -145,27 +159,29 @@
             this.btnListarProducto.TabIndex = 0;
             this.btnListarProducto.Text = "Listar";
             this.btnListarProducto.UseSelectable = true;
+            this.btnListarProducto.Click += new System.EventHandler(this.btnListarProducto_Click);
             // 
-            // panel1
+            // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = null;
-            reportDataSource2.Name = "DataSet2";
-            this.panel1.LocalReport.DataSources.Add(reportDataSource1);
-            this.panel1.LocalReport.DataSources.Add(reportDataSource2);
-            this.panel1.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.ProductosDadosBaja.rdlc";
-            this.panel1.Location = new System.Drawing.Point(13, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.ServerReport.BearerToken = null;
-            this.panel1.Size = new System.Drawing.Size(510, 558);
-            this.panel1.TabIndex = 5;
+            reportDataSource1.Name = "Prodcuto";
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.reporteBodega.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(23, 63);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(512, 531);
+            this.reportViewer1.TabIndex = 4;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
             // 
             // ListaBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 694);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -174,6 +190,8 @@
             this.Name = "ListaBodega";
             this.Text = "ListaBodega";
             this.Load += new System.EventHandler(this.ListaBodega_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -195,7 +213,10 @@
         private MetroFramework.Controls.MetroButton btnProductoDeBaja;
         private System.Windows.Forms.GroupBox groupBox5;
         private MetroFramework.Controls.MetroButton btnListarProducto;
-        private Microsoft.Reporting.WinForms.ReportViewer panel1;
         private System.Windows.Forms.BindingSource productoBindingSource;
+        private discotequeDataSet discotequeDataSet;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private discotequeDataSetTableAdapters.productoTableAdapter productoTableAdapter;
     }
 }

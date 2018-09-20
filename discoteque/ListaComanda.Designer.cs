@@ -28,32 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNombre = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.btnListarMesero = new MetroFramework.Controls.MetroButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnListarVip = new MetroFramework.Controls.MetroButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTermino = new MetroFramework.Controls.MetroDateTime();
+            this.dateInicio = new MetroFramework.Controls.MetroDateTime();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.btnListarFecha = new MetroFramework.Controls.MetroButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnMasVendido = new MetroFramework.Controls.MetroButton();
-            this.btnMenosVendido = new MetroFramework.Controls.MetroButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.dateInicio = new MetroFramework.Controls.MetroDateTime();
-            this.dateTermino = new MetroFramework.Controls.MetroDateTime();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.txtNombre = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.btnMenosVendido = new MetroFramework.Controls.MetroButton();
+            this.btnMasVendido = new MetroFramework.Controls.MetroButton();
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
+            reportDataSource1.Name = "Prodcuto";
+            reportDataSource1.Value = this.productoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.reporteBodega.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 63);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -71,6 +82,45 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listar Por Mesero";
+            // 
+            // txtNombre
+            // 
+            // 
+            // 
+            // 
+            this.txtNombre.CustomButton.Image = null;
+            this.txtNombre.CustomButton.Location = new System.Drawing.Point(150, 1);
+            this.txtNombre.CustomButton.Name = "";
+            this.txtNombre.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtNombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNombre.CustomButton.TabIndex = 1;
+            this.txtNombre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNombre.CustomButton.UseSelectable = true;
+            this.txtNombre.CustomButton.Visible = false;
+            this.txtNombre.Lines = new string[0];
+            this.txtNombre.Location = new System.Drawing.Point(14, 38);
+            this.txtNombre.MaxLength = 32767;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PasswordChar = '\0';
+            this.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNombre.SelectedText = "";
+            this.txtNombre.SelectionLength = 0;
+            this.txtNombre.SelectionStart = 0;
+            this.txtNombre.ShortcutsEnabled = true;
+            this.txtNombre.Size = new System.Drawing.Size(172, 23);
+            this.txtNombre.TabIndex = 2;
+            this.txtNombre.UseSelectable = true;
+            this.txtNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(14, 16);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(129, 19);
+            this.metroLabel5.TabIndex = 1;
+            this.metroLabel5.Text = "Nombre del Mesero";
             // 
             // btnListarMesero
             // 
@@ -114,6 +164,41 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Listar Por Fecha";
             // 
+            // dateTermino
+            // 
+            this.dateTermino.Location = new System.Drawing.Point(142, 75);
+            this.dateTermino.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateTermino.Name = "dateTermino";
+            this.dateTermino.Size = new System.Drawing.Size(200, 29);
+            this.dateTermino.TabIndex = 4;
+            // 
+            // dateInicio
+            // 
+            this.dateInicio.Location = new System.Drawing.Point(142, 32);
+            this.dateInicio.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateInicio.Name = "dateInicio";
+            this.dateInicio.Size = new System.Drawing.Size(200, 29);
+            this.dateInicio.TabIndex = 3;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(14, 85);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(115, 19);
+            this.metroLabel4.TabIndex = 2;
+            this.metroLabel4.Text = "Fecha de Termino";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(14, 32);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel3.TabIndex = 1;
+            this.metroLabel3.Text = "Fecha de Inicio";
+            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
+            // 
             // btnListarFecha
             // 
             this.btnListarFecha.Location = new System.Drawing.Point(95, 134);
@@ -136,23 +221,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Producto Mas y Menos Vendidos";
             // 
-            // btnMasVendido
+            // metroLabel2
             // 
-            this.btnMasVendido.Location = new System.Drawing.Point(151, 30);
-            this.btnMasVendido.Name = "btnMasVendido";
-            this.btnMasVendido.Size = new System.Drawing.Size(68, 31);
-            this.btnMasVendido.TabIndex = 0;
-            this.btnMasVendido.Text = "Listar";
-            this.btnMasVendido.UseSelectable = true;
-            // 
-            // btnMenosVendido
-            // 
-            this.btnMenosVendido.Location = new System.Drawing.Point(151, 67);
-            this.btnMenosVendido.Name = "btnMenosVendido";
-            this.btnMenosVendido.Size = new System.Drawing.Size(68, 31);
-            this.btnMenosVendido.TabIndex = 1;
-            this.btnMenosVendido.Text = "Listar";
-            this.btnMenosVendido.UseSelectable = true;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(14, 67);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(101, 19);
+            this.metroLabel2.TabIndex = 3;
+            this.metroLabel2.Text = "Menos Vendido";
             // 
             // metroLabel1
             // 
@@ -163,88 +239,37 @@
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Mas Vendido";
             // 
-            // metroLabel2
+            // btnMenosVendido
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(14, 67);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(101, 19);
-            this.metroLabel2.TabIndex = 3;
-            this.metroLabel2.Text = "Menos Vendido";
+            this.btnMenosVendido.Location = new System.Drawing.Point(151, 67);
+            this.btnMenosVendido.Name = "btnMenosVendido";
+            this.btnMenosVendido.Size = new System.Drawing.Size(68, 31);
+            this.btnMenosVendido.TabIndex = 1;
+            this.btnMenosVendido.Text = "Listar";
+            this.btnMenosVendido.UseSelectable = true;
             // 
-            // metroLabel3
+            // btnMasVendido
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(14, 32);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(96, 19);
-            this.metroLabel3.TabIndex = 1;
-            this.metroLabel3.Text = "Fecha de Inicio";
-            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
+            this.btnMasVendido.Location = new System.Drawing.Point(151, 30);
+            this.btnMasVendido.Name = "btnMasVendido";
+            this.btnMasVendido.Size = new System.Drawing.Size(68, 31);
+            this.btnMasVendido.TabIndex = 0;
+            this.btnMasVendido.Text = "Listar";
+            this.btnMasVendido.UseSelectable = true;
             // 
-            // metroLabel4
+            // discotequeDataSet
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(14, 85);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(115, 19);
-            this.metroLabel4.TabIndex = 2;
-            this.metroLabel4.Text = "Fecha de Termino";
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dateInicio
+            // productoBindingSource
             // 
-            this.dateInicio.Location = new System.Drawing.Point(142, 32);
-            this.dateInicio.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dateInicio.Name = "dateInicio";
-            this.dateInicio.Size = new System.Drawing.Size(200, 29);
-            this.dateInicio.TabIndex = 3;
+            this.productoBindingSource.DataMember = "producto";
+            this.productoBindingSource.DataSource = this.discotequeDataSet;
             // 
-            // dateTermino
+            // productoTableAdapter
             // 
-            this.dateTermino.Location = new System.Drawing.Point(142, 75);
-            this.dateTermino.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dateTermino.Name = "dateTermino";
-            this.dateTermino.Size = new System.Drawing.Size(200, 29);
-            this.dateTermino.TabIndex = 4;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(14, 16);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(129, 19);
-            this.metroLabel5.TabIndex = 1;
-            this.metroLabel5.Text = "Nombre del Mesero";
-            // 
-            // txtNombre
-            // 
-            // 
-            // 
-            // 
-            this.txtNombre.CustomButton.Image = null;
-            this.txtNombre.CustomButton.Location = new System.Drawing.Point(150, 1);
-            this.txtNombre.CustomButton.Name = "";
-            this.txtNombre.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNombre.CustomButton.TabIndex = 1;
-            this.txtNombre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNombre.CustomButton.UseSelectable = true;
-            this.txtNombre.CustomButton.Visible = false;
-            this.txtNombre.Lines = new string[0];
-            this.txtNombre.Location = new System.Drawing.Point(14, 38);
-            this.txtNombre.MaxLength = 32767;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.SelectionLength = 0;
-            this.txtNombre.SelectionStart = 0;
-            this.txtNombre.ShortcutsEnabled = true;
-            this.txtNombre.Size = new System.Drawing.Size(172, 23);
-            this.txtNombre.TabIndex = 2;
-            this.txtNombre.UseSelectable = true;
-            this.txtNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.productoTableAdapter.ClearBeforeFill = true;
             // 
             // txtNombreMesero
             // 
@@ -257,6 +282,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "txtNombreMesero";
+            this.Load += new System.EventHandler(this.txtNombreMesero_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -264,6 +290,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,5 +316,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroDateTime dateTermino;
         private MetroFramework.Controls.MetroDateTime dateInicio;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private discotequeDataSet discotequeDataSet;
+        private discotequeDataSetTableAdapters.productoTableAdapter productoTableAdapter;
     }
 }
