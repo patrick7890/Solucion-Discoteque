@@ -228,6 +228,7 @@
     <EmbeddedResource Include="Reportes\ProductosDadosBaja.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporteBodega.rdlc" />
     <None Include="App.Config" />
     <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.ActualizarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

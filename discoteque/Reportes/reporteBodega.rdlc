@@ -154,7 +154,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>tipo Producto idtipo Producto</Value>
+                              <Value>descripcino</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -302,21 +302,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="tipoProducto_idtipoProducto">
+                    <Textbox Name="descripcionTipoP">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!tipoProducto_idtipoProducto.Value</Value>
+                              <Value>=Fields!descripcionTipoP.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>tipoProducto_idtipoProducto</rd:DefaultName>
+                      <rd:DefaultName>descripcionTipoP</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -430,26 +430,6 @@
           <DataField>tipoProducto_idtipoProducto</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>discotequeDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Patricio\source\repos\Solucion-Discoteque\discoteque\discotequeDataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>producto</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>productoTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="TiposP">
-      <Query>
-        <DataSourceName>discotequeDataSet</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="idtipoProducto">
-          <DataField>idtipoProducto</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="descripcionTipoP">
           <DataField>descripcionTipoP</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -458,10 +438,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>discotequeDataSet</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Patricio\source\repos\Solucion-Discoteque\discoteque\discotequeDataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>tipoproducto</rd:TableName>
+        <rd:TableName>producto</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>tipoproductoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>productoTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
