@@ -45,5 +45,19 @@ namespace discoteque
             ListaBodega Form1 = new ListaBodega();
             Form1.Show();
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            ListaComanda2 Form1 = new ListaComanda2();
+            Form1.Show();
+
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

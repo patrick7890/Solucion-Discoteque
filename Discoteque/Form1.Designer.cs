@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
@@ -37,6 +37,8 @@
             this.btnBodega = new MetroFramework.Controls.MetroButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +65,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(637, 242);
+            this.metroButton1.Location = new System.Drawing.Point(623, 215);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 2;
@@ -73,7 +75,7 @@
             // 
             // btnBodega
             // 
-            this.btnBodega.Location = new System.Drawing.Point(646, 325);
+            this.btnBodega.Location = new System.Drawing.Point(623, 270);
             this.btnBodega.Name = "btnBodega";
             this.btnBodega.Size = new System.Drawing.Size(75, 23);
             this.btnBodega.TabIndex = 3;
@@ -83,9 +85,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "Atencion";
-            reportDataSource1.Value = this.atencionBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "Atencion";
+            reportDataSource2.Value = this.atencionBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.atenciones.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(37, 81);
             this.reportViewer1.Name = "reportViewer1";
@@ -97,11 +99,33 @@
             // 
             this.atencionTableAdapter.ClearBeforeFill = true;
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(623, 330);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 5;
+            this.metroButton2.Text = "ListaComanda";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // metroLink1
+            // 
+            this.metroLink1.Location = new System.Drawing.Point(547, 176);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.Size = new System.Drawing.Size(75, 23);
+            this.metroLink1.TabIndex = 6;
+            this.metroLink1.Text = "metroLink1";
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.metroLink1);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnBodega);
             this.Controls.Add(this.metroButton1);
@@ -123,6 +147,8 @@
         private System.Windows.Forms.BindingSource atencionBindingSource;
         private discotequeDataSet discotequeDataSet;
         private discotequeDataSetTableAdapters.atencionTableAdapter atencionTableAdapter;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroLink metroLink1;
     }
 }
 

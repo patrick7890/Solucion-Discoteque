@@ -24,9 +24,20 @@ namespace discoteque
 
         private void txtNombreMesero_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.discotequeDataSet.producto);
+            
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.atencion' Puede moverla o quitarla según sea necesario.
+            this.atencionTableAdapter.Fill(this.discotequeDataSet.atencion);
 
+            this.reportViewer1.RefreshReport();
+
+        }
+
+        private void btnListarMesero_Click(object sender, EventArgs e)
+        {
+
+            this.atencionTableAdapter.TablaFiltroMesero(txtNombre.Text);
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }
