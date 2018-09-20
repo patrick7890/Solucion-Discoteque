@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="discotequeModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="atencion">
+          <Key>
+            <PropertyRef Name="idatencion" />
+            <PropertyRef Name="usuario_idusuario" />
+          </Key>
+          <Property Name="idatencion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="totalatencion" Type="int" Nullable="false" />
+          <Property Name="faturada" Type="smallint" Nullable="false" />
+          <Property Name="propina" Type="int" Nullable="false" />
+          <Property Name="fecha" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="usuario_idusuario" Type="int" Nullable="false" />
+          <Property Name="tipoSala_idtipoSala" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comanda">
+          <Key>
+            <PropertyRef Name="idcomanda" />
+          </Key>
+          <Property Name="idcomanda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="totalcomanda" Type="int" Nullable="false" />
+          <Property Name="atencion_idatencion" Type="int" Nullable="false" />
+          <Property Name="atencion_usuario_idusuario" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'discoteque.dbo.comanda_producto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="comanda_producto">
+          <Key>
+            <PropertyRef Name="producto_idproducto" />
+            <PropertyRef Name="comanda_idcomanda" />
+          </Key>
+          <Property Name="producto_idproducto" Type="int" Nullable="false" />
+          <Property Name="comanda_idcomanda" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="producto">
+          <Key>
+            <PropertyRef Name="idproducto" />
+          </Key>
+          <Property Name="idproducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombreProducto" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="precio" Type="int" Nullable="false" />
+          <Property Name="stock" Type="int" Nullable="false" />
+          <Property Name="enVenta" Type="smallint" Nullable="false" />
+          <Property Name="tipoProducto_idtipoProducto" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tipoproducto">
+          <Key>
+            <PropertyRef Name="idtipoProducto" />
+          </Key>
+          <Property Name="idtipoProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descripcionTipoP" Type="nvarchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tiposala">
+          <Key>
+            <PropertyRef Name="idtipoSala" />
+          </Key>
+          <Property Name="idtipoSala" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desctipoSala" Type="nvarchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tipousuario">
+          <Key>
+            <PropertyRef Name="idtipoUsuario" />
+          </Key>
+          <Property Name="idtipoUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descripciontipoU" Type="nvarchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="idusuario" />
+          </Key>
+          <Property Name="idusuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombreusuario" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="passusuario" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="cuentausuario" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="activo" Type="smallint" Nullable="false" />
+          <Property Name="tipoUsuario_idtipoUsuario" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="atencion$fk_atencion_tipoSala1">
+          <End Role="tiposala" Type="Self.tiposala" Multiplicity="1" />
+          <End Role="atencion" Type="Self.atencion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tiposala">
+              <PropertyRef Name="idtipoSala" />
+            </Principal>
+            <Dependent Role="atencion">
+              <PropertyRef Name="tipoSala_idtipoSala" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="atencion$fk_atencion_usuario1">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="atencion" Type="Self.atencion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="idusuario" />
+            </Principal>
+            <Dependent Role="atencion">
+              <PropertyRef Name="usuario_idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comanda$fk_comanda_atencion1">
+          <End Role="atencion" Type="Self.atencion" Multiplicity="1" />
+          <End Role="comanda" Type="Self.comanda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="atencion">
+              <PropertyRef Name="idatencion" />
+              <PropertyRef Name="usuario_idusuario" />
+            </Principal>
+            <Dependent Role="comanda">
+              <PropertyRef Name="atencion_idatencion" />
+              <PropertyRef Name="atencion_usuario_idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comanda_producto$fk_comanda_producto_comanda1">
+          <End Role="comanda" Type="Self.comanda" Multiplicity="1" />
+          <End Role="comanda_producto" Type="Self.comanda_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comanda">
+              <PropertyRef Name="idcomanda" />
+            </Principal>
+            <Dependent Role="comanda_producto">
+              <PropertyRef Name="comanda_idcomanda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comanda_producto$fk_comanda_producto_producto1">
+          <End Role="producto" Type="Self.producto" Multiplicity="1" />
+          <End Role="comanda_producto" Type="Self.comanda_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="producto">
+              <PropertyRef Name="idproducto" />
+            </Principal>
+            <Dependent Role="comanda_producto">
+              <PropertyRef Name="producto_idproducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="producto$fk_producto_tipoProducto1">
+          <End Role="tipoproducto" Type="Self.tipoproducto" Multiplicity="1" />
+          <End Role="producto" Type="Self.producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoproducto">
+              <PropertyRef Name="idtipoProducto" />
+            </Principal>
+            <Dependent Role="producto">
+              <PropertyRef Name="tipoProducto_idtipoProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario$fk_usuario_tipoUsuario">
+          <End Role="tipousuario" Type="Self.tipousuario" Multiplicity="1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipousuario">
+              <PropertyRef Name="idtipoUsuario" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="tipoUsuario_idtipoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="discotequeModel1StoreContainer">
+          <EntitySet Name="atencion" EntityType="Self.atencion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="comanda" EntityType="Self.comanda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="producto" EntityType="Self.producto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipoproducto" EntityType="Self.tipoproducto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tiposala" EntityType="Self.tiposala" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipousuario" EntityType="Self.tipousuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="comanda_producto" EntityType="Self.comanda_producto" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[comanda_producto].[producto_idproducto] AS [producto_idproducto], 
+[comanda_producto].[comanda_idcomanda] AS [comanda_idcomanda]
+FROM [dbo].[comanda_producto] AS [comanda_producto]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="atencion$fk_atencion_tipoSala1" Association="Self.atencion$fk_atencion_tipoSala1">
+            <End Role="tiposala" EntitySet="tiposala" />
+            <End Role="atencion" EntitySet="atencion" />
+          </AssociationSet>
+          <AssociationSet Name="atencion$fk_atencion_usuario1" Association="Self.atencion$fk_atencion_usuario1">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="atencion" EntitySet="atencion" />
+          </AssociationSet>
+          <AssociationSet Name="comanda$fk_comanda_atencion1" Association="Self.comanda$fk_comanda_atencion1">
+            <End Role="atencion" EntitySet="atencion" />
+            <End Role="comanda" EntitySet="comanda" />
+          </AssociationSet>
+          <AssociationSet Name="comanda_producto$fk_comanda_producto_comanda1" Association="Self.comanda_producto$fk_comanda_producto_comanda1">
+            <End Role="comanda" EntitySet="comanda" />
+            <End Role="comanda_producto" EntitySet="comanda_producto" />
+          </AssociationSet>
+          <AssociationSet Name="comanda_producto$fk_comanda_producto_producto1" Association="Self.comanda_producto$fk_comanda_producto_producto1">
+            <End Role="producto" EntitySet="producto" />
+            <End Role="comanda_producto" EntitySet="comanda_producto" />
+          </AssociationSet>
+          <AssociationSet Name="producto$fk_producto_tipoProducto1" Association="Self.producto$fk_producto_tipoProducto1">
+            <End Role="tipoproducto" EntitySet="tipoproducto" />
+            <End Role="producto" EntitySet="producto" />
+          </AssociationSet>
+          <AssociationSet Name="usuario$fk_usuario_tipoUsuario" Association="Self.usuario$fk_usuario_tipoUsuario">
+            <End Role="tipousuario" EntitySet="tipousuario" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="discotequeModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="atencion">
+          <Key>
+            <PropertyRef Name="idatencion" />
+            <PropertyRef Name="usuario_idusuario" />
+          </Key>
+          <Property Name="idatencion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="totalatencion" Type="Int32" Nullable="false" />
+          <Property Name="faturada" Type="Int16" Nullable="false" />
+          <Property Name="propina" Type="Int32" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="usuario_idusuario" Type="Int32" Nullable="false" />
+          <Property Name="tipoSala_idtipoSala" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tiposala" Relationship="Self.atencion_fk_atencion_tipoSala1" FromRole="atencion" ToRole="tiposala" />
+          <NavigationProperty Name="usuario" Relationship="Self.atencion_fk_atencion_usuario1" FromRole="atencion" ToRole="usuario" />
+          <NavigationProperty Name="comanda" Relationship="Self.comanda_fk_comanda_atencion1" FromRole="atencion" ToRole="comanda" />
+        </EntityType>
+        <EntityType Name="comanda">
+          <Key>
+            <PropertyRef Name="idcomanda" />
+          </Key>
+          <Property Name="idcomanda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="totalcomanda" Type="Int32" Nullable="false" />
+          <Property Name="atencion_idatencion" Type="Int32" Nullable="false" />
+          <Property Name="atencion_usuario_idusuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="atencion" Relationship="Self.comanda_fk_comanda_atencion1" FromRole="comanda" ToRole="atencion" />
+          <NavigationProperty Name="producto" Relationship="Self.comanda_producto" FromRole="comanda" ToRole="producto" />
+        </EntityType>
+        <EntityType Name="producto">
+          <Key>
+            <PropertyRef Name="idproducto" />
+          </Key>
+          <Property Name="idproducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreProducto" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="precio" Type="Int32" Nullable="false" />
+          <Property Name="stock" Type="Int32" Nullable="false" />
+          <Property Name="enVenta" Type="Int16" Nullable="false" />
+          <Property Name="tipoProducto_idtipoProducto" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tipoproducto" Relationship="Self.producto_fk_producto_tipoProducto1" FromRole="producto" ToRole="tipoproducto" />
+          <NavigationProperty Name="comanda" Relationship="Self.comanda_producto" FromRole="producto" ToRole="comanda" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tipoproducto">
+          <Key>
+            <PropertyRef Name="idtipoProducto" />
+          </Key>
+          <Property Name="idtipoProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcionTipoP" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="producto" Relationship="Self.producto_fk_producto_tipoProducto1" FromRole="tipoproducto" ToRole="producto" />
+        </EntityType>
+        <EntityType Name="tiposala">
+          <Key>
+            <PropertyRef Name="idtipoSala" />
+          </Key>
+          <Property Name="idtipoSala" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="desctipoSala" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="atencion" Relationship="Self.atencion_fk_atencion_tipoSala1" FromRole="tiposala" ToRole="atencion" />
+        </EntityType>
+        <EntityType Name="tipousuario">
+          <Key>
+            <PropertyRef Name="idtipoUsuario" />
+          </Key>
+          <Property Name="idtipoUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripciontipoU" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="usuario" Relationship="Self.usuario_fk_usuario_tipoUsuario" FromRole="tipousuario" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="idusuario" />
+          </Key>
+          <Property Name="idusuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreusuario" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="passusuario" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cuentausuario" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activo" Type="Int16" Nullable="false" />
+          <Property Name="tipoUsuario_idtipoUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="atencion" Relationship="Self.atencion_fk_atencion_usuario1" FromRole="usuario" ToRole="atencion" />
+          <NavigationProperty Name="tipousuario" Relationship="Self.usuario_fk_usuario_tipoUsuario" FromRole="usuario" ToRole="tipousuario" />
+        </EntityType>
+        <Association Name="atencion_fk_atencion_tipoSala1">
+          <End Role="tiposala" Type="Self.tiposala" Multiplicity="1" />
+          <End Role="atencion" Type="Self.atencion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tiposala">
+              <PropertyRef Name="idtipoSala" />
+            </Principal>
+            <Dependent Role="atencion">
+              <PropertyRef Name="tipoSala_idtipoSala" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="atencion_fk_atencion_usuario1">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="atencion" Type="Self.atencion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="idusuario" />
+            </Principal>
+            <Dependent Role="atencion">
+              <PropertyRef Name="usuario_idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comanda_fk_comanda_atencion1">
+          <End Role="atencion" Type="Self.atencion" Multiplicity="1" />
+          <End Role="comanda" Type="Self.comanda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="atencion">
+              <PropertyRef Name="idatencion" />
+              <PropertyRef Name="usuario_idusuario" />
+            </Principal>
+            <Dependent Role="comanda">
+              <PropertyRef Name="atencion_idatencion" />
+              <PropertyRef Name="atencion_usuario_idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="producto_fk_producto_tipoProducto1">
+          <End Role="tipoproducto" Type="Self.tipoproducto" Multiplicity="1" />
+          <End Role="producto" Type="Self.producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoproducto">
+              <PropertyRef Name="idtipoProducto" />
+            </Principal>
+            <Dependent Role="producto">
+              <PropertyRef Name="tipoProducto_idtipoProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_fk_usuario_tipoUsuario">
+          <End Role="tipousuario" Type="Self.tipousuario" Multiplicity="1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipousuario">
+              <PropertyRef Name="idtipoUsuario" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="tipoUsuario_idtipoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comanda_producto">
+          <End Role="comanda" Type="Self.comanda" Multiplicity="*" />
+          <End Role="producto" Type="Self.producto" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="discotequeEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="atencion" EntityType="Self.atencion" />
+          <EntitySet Name="comanda" EntityType="Self.comanda" />
+          <EntitySet Name="producto" EntityType="Self.producto" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="tipoproducto" EntityType="Self.tipoproducto" />
+          <EntitySet Name="tiposala" EntityType="Self.tiposala" />
+          <EntitySet Name="tipousuario" EntityType="Self.tipousuario" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" />
+          <AssociationSet Name="atencion_fk_atencion_tipoSala1" Association="Self.atencion_fk_atencion_tipoSala1">
+            <End Role="tiposala" EntitySet="tiposala" />
+            <End Role="atencion" EntitySet="atencion" />
+          </AssociationSet>
+          <AssociationSet Name="atencion_fk_atencion_usuario1" Association="Self.atencion_fk_atencion_usuario1">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="atencion" EntitySet="atencion" />
+          </AssociationSet>
+          <AssociationSet Name="comanda_fk_comanda_atencion1" Association="Self.comanda_fk_comanda_atencion1">
+            <End Role="atencion" EntitySet="atencion" />
+            <End Role="comanda" EntitySet="comanda" />
+          </AssociationSet>
+          <AssociationSet Name="producto_fk_producto_tipoProducto1" Association="Self.producto_fk_producto_tipoProducto1">
+            <End Role="tipoproducto" EntitySet="tipoproducto" />
+            <End Role="producto" EntitySet="producto" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_fk_usuario_tipoUsuario" Association="Self.usuario_fk_usuario_tipoUsuario">
+            <End Role="tipousuario" EntitySet="tipousuario" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="comanda_producto" Association="Self.comanda_producto">
+            <End Role="comanda" EntitySet="comanda" />
+            <End Role="producto" EntitySet="producto" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="discotequeModel1StoreContainer" CdmEntityContainer="discotequeEntities1">
+          <EntitySetMapping Name="atencion">
+            <EntityTypeMapping TypeName="discotequeModel1.atencion">
+              <MappingFragment StoreEntitySet="atencion">
+                <ScalarProperty Name="idatencion" ColumnName="idatencion" />
+                <ScalarProperty Name="totalatencion" ColumnName="totalatencion" />
+                <ScalarProperty Name="faturada" ColumnName="faturada" />
+                <ScalarProperty Name="propina" ColumnName="propina" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="usuario_idusuario" ColumnName="usuario_idusuario" />
+                <ScalarProperty Name="tipoSala_idtipoSala" ColumnName="tipoSala_idtipoSala" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comanda">
+            <EntityTypeMapping TypeName="discotequeModel1.comanda">
+              <MappingFragment StoreEntitySet="comanda">
+                <ScalarProperty Name="idcomanda" ColumnName="idcomanda" />
+                <ScalarProperty Name="totalcomanda" ColumnName="totalcomanda" />
+                <ScalarProperty Name="atencion_idatencion" ColumnName="atencion_idatencion" />
+                <ScalarProperty Name="atencion_usuario_idusuario" ColumnName="atencion_usuario_idusuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="producto">
+            <EntityTypeMapping TypeName="discotequeModel1.producto">
+              <MappingFragment StoreEntitySet="producto">
+                <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+                <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="enVenta" ColumnName="enVenta" />
+                <ScalarProperty Name="tipoProducto_idtipoProducto" ColumnName="tipoProducto_idtipoProducto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="discotequeModel1.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipoproducto">
+            <EntityTypeMapping TypeName="discotequeModel1.tipoproducto">
+              <MappingFragment StoreEntitySet="tipoproducto">
+                <ScalarProperty Name="idtipoProducto" ColumnName="idtipoProducto" />
+                <ScalarProperty Name="descripcionTipoP" ColumnName="descripcionTipoP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tiposala">
+            <EntityTypeMapping TypeName="discotequeModel1.tiposala">
+              <MappingFragment StoreEntitySet="tiposala">
+                <ScalarProperty Name="idtipoSala" ColumnName="idtipoSala" />
+                <ScalarProperty Name="desctipoSala" ColumnName="desctipoSala" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipousuario">
+            <EntityTypeMapping TypeName="discotequeModel1.tipousuario">
+              <MappingFragment StoreEntitySet="tipousuario">
+                <ScalarProperty Name="idtipoUsuario" ColumnName="idtipoUsuario" />
+                <ScalarProperty Name="descripciontipoU" ColumnName="descripciontipoU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="discotequeModel1.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+                <ScalarProperty Name="nombreusuario" ColumnName="nombreusuario" />
+                <ScalarProperty Name="passusuario" ColumnName="passusuario" />
+                <ScalarProperty Name="cuentausuario" ColumnName="cuentausuario" />
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="tipoUsuario_idtipoUsuario" ColumnName="tipoUsuario_idtipoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="comanda_producto" TypeName="discotequeModel1.comanda_producto" StoreEntitySet="comanda_producto">
+            <EndProperty Name="comanda">
+              <ScalarProperty Name="idcomanda" ColumnName="comanda_idcomanda" />
+            </EndProperty>
+            <EndProperty Name="producto">
+              <ScalarProperty Name="idproducto" ColumnName="producto_idproducto" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

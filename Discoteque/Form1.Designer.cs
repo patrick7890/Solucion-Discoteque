@@ -31,6 +31,7 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnBodega = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -61,11 +62,22 @@
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
+            // btnBodega
+            // 
+            this.btnBodega.Location = new System.Drawing.Point(646, 325);
+            this.btnBodega.Name = "btnBodega";
+            this.btnBodega.Size = new System.Drawing.Size(75, 23);
+            this.btnBodega.TabIndex = 3;
+            this.btnBodega.Text = "ListaBodega";
+            this.btnBodega.UseSelectable = true;
+            this.btnBodega.Click += new System.EventHandler(this.btnBodega_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBodega);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.reportViewer1);
@@ -81,6 +93,7 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private MetroFramework.Controls.MetroButton btnLogin;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnBodega;
     }
 }
 

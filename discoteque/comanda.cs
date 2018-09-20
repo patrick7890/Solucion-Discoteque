@@ -16,7 +16,7 @@ namespace discoteque
     {
         public comanda()
         {
-            this.comanda_producto = new HashSet<comanda_producto>();
+            this.producto = new HashSet<producto>();
         }
     
         public int idcomanda { get; set; }
@@ -25,6 +25,6 @@ namespace discoteque
         public int atencion_usuario_idusuario { get; set; }
     
         public virtual atencion atencion { get; set; }
-        public virtual ICollection<comanda_producto> comanda_producto { get; set; }
+        public virtual ICollection<producto> producto { get; set; }
     }
 }
