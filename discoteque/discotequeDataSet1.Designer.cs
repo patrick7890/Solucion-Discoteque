@@ -4136,7 +4136,7 @@ namespace discoteque.discotequeDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT a.idatencion
@@ -4152,6 +4152,35 @@ namespace discoteque.discotequeDataSetTableAdapters {
   INNER JOIN discoteque.usuario u ON a.usuario_idusuario=u.idusuario
   INNER JOIN discoteque.tiposala t ON a.tipoSala_idtipoSala=t.idtipoSala";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT        a.idatencion, a.totalatencion, a.faturada, a.propina, a.fecha, a.usuario_idusuario, a.tipoSala_idtipoSala, u.nombreusuario, t.desctipoSala
+FROM            discoteque.atencion AS a INNER JOIN
+                         discoteque.usuario AS u ON a.usuario_idusuario = u.idusuario INNER JOIN
+                         discoteque.tiposala AS t ON a.tipoSala_idtipoSala = t.idtipoSala
+WHERE        (a.fecha BETWEEN @fechaini AND @fechafin)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaini", global::System.Data.SqlDbType.DateTime2, 6, global::System.Data.ParameterDirection.Input, 0, 0, "fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechafin", global::System.Data.SqlDbType.DateTime2, 6, global::System.Data.ParameterDirection.Input, 0, 0, "fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        a.idatencion, a.totalatencion, a.faturada, a.propina, a.fecha, a.usuario_idusuario, a.tipoSala_idtipoSala, u.nombreusuario, t.desctipoSala
+FROM            discoteque.atencion AS a INNER JOIN
+                         discoteque.usuario AS u ON a.usuario_idusuario = u.idusuario INNER JOIN
+                         discoteque.tiposala AS t ON a.tipoSala_idtipoSala = t.idtipoSala
+WHERE        (LOWER(u.nombreusuario) = LOWER(@usuario))";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT        a.idatencion, a.totalatencion, a.faturada, a.propina, a.fecha, a.usuario_idusuario, a.tipoSala_idtipoSala, u.nombreusuario, t.desctipoSala
+FROM            discoteque.atencion AS a INNER JOIN
+                         discoteque.usuario AS u ON a.usuario_idusuario = u.idusuario INNER JOIN
+                         discoteque.tiposala AS t ON a.tipoSala_idtipoSala = t.idtipoSala
+WHERE        (LOWER(t.desctipoSala) = LOWER(@sala))";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sala", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4173,6 +4202,126 @@ namespace discoteque.discotequeDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual discotequeDataSet.atencionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            discotequeDataSet.atencionDataTable dataTable = new discotequeDataSet.atencionDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FiltroFecha(discotequeDataSet.atencionDataTable dataTable, string fechaini, string fechafin) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((fechaini == null)) {
+                throw new global::System.ArgumentNullException("fechaini");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(fechaini));
+            }
+            if ((fechafin == null)) {
+                throw new global::System.ArgumentNullException("fechafin");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(fechafin));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual discotequeDataSet.atencionDataTable TablaFiltroFecha(string fechaini, string fechafin) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((fechaini == null)) {
+                throw new global::System.ArgumentNullException("fechaini");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(fechaini));
+            }
+            if ((fechafin == null)) {
+                throw new global::System.ArgumentNullException("fechafin");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(fechafin));
+            }
+            discotequeDataSet.atencionDataTable dataTable = new discotequeDataSet.atencionDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FiltroMesero(discotequeDataSet.atencionDataTable dataTable, string usuario) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((usuario == null)) {
+                throw new global::System.ArgumentNullException("usuario");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(usuario));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual discotequeDataSet.atencionDataTable TablaFiltroMesero(string usuario) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((usuario == null)) {
+                throw new global::System.ArgumentNullException("usuario");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(usuario));
+            }
+            discotequeDataSet.atencionDataTable dataTable = new discotequeDataSet.atencionDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FiltroSala(discotequeDataSet.atencionDataTable dataTable, string sala) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((sala == null)) {
+                throw new global::System.ArgumentNullException("sala");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(sala));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual discotequeDataSet.atencionDataTable TablaFiltroSala(string sala) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((sala == null)) {
+                throw new global::System.ArgumentNullException("sala");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(sala));
+            }
             discotequeDataSet.atencionDataTable dataTable = new discotequeDataSet.atencionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
