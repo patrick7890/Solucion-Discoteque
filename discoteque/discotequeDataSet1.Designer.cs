@@ -4981,10 +4981,10 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        p.idproducto, p.nombreProducto, p.precio, p.stock, p.enVenta, t.des" +
-                "cripcionTipoP\r\nFROM            discoteque.producto AS p INNER JOIN\r\n            " +
-                "             discoteque.tipoproducto AS t ON t.idtipoProducto = p.tipoProducto_i" +
-                "dtipoProducto";
+            this._commandCollection[1].CommandText = "SELECT p.idproducto\r\n      ,p.nombreProducto\r\n      ,p.precio\r\n      ,p.stock\r\n  " +
+                "    ,p.enVenta\r\n      ,t.descripcionTipoP\r\n  FROM discoteque.discoteque.producto" +
+                " p \r\n  JOIN discoteque.tipoproducto t ON t.idtipoProducto = p.tipoProducto_idtip" +
+                "oProducto";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5016,7 +5016,7 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(discotequeDataSet.productoDataTable dataTable) {
+        public virtual int productosTipo(discotequeDataSet.productoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5029,7 +5029,7 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual discotequeDataSet.productoDataTable ProductoTipo() {
+        public virtual discotequeDataSet.productoDataTable GetproductosTipo() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             discotequeDataSet.productoDataTable dataTable = new discotequeDataSet.productoDataTable();
             this.Adapter.Fill(dataTable);

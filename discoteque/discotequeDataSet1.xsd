@@ -228,12 +228,17 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
               <Mapping SourceColumn="tipoProducto_idtipoProducto" DataSetColumn="tipoProducto_idtipoProducto" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="discotequeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="ProductoTipo" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="ProductoTipo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="ProductoTipo" UserSourceName="FillBy">
+              <DbSource ConnectionRef="discotequeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="productosTipo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetproductosTipo" GeneratorSourceName="productosTipo" GetMethodModifier="Public" GetMethodName="GetproductosTipo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetproductosTipo" UserSourceName="productosTipo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        p.idproducto, p.nombreProducto, p.precio, p.stock, p.enVenta, t.descripcionTipoP
-FROM            discoteque.producto AS p INNER JOIN
-                         discoteque.tipoproducto AS t ON t.idtipoProducto = p.tipoProducto_idtipoProducto</CommandText>
+                    <CommandText>SELECT p.idproducto
+      ,p.nombreProducto
+      ,p.precio
+      ,p.stock
+      ,p.enVenta
+      ,t.descripcionTipoP
+  FROM discoteque.discoteque.producto p 
+  JOIN discoteque.tipoproducto t ON t.idtipoProducto = p.tipoProducto_idtipoProducto</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>

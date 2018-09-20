@@ -109,6 +109,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="discotequeDataSet1.cs">
+      <DependentUpon>discotequeDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="discotequeDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
