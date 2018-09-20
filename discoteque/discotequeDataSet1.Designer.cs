@@ -4973,12 +4973,19 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPro" +
                 "ducto FROM discoteque.producto";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        p.idproducto, p.nombreProducto, p.precio, p.stock, p.enVenta, t.des" +
+                "cripcionTipoP\r\nFROM            discoteque.producto AS p INNER JOIN\r\n            " +
+                "             discoteque.tipoproducto AS t ON t.idtipoProducto = p.tipoProducto_i" +
+                "dtipoProducto";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5000,6 +5007,30 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual discotequeDataSet.productoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            discotequeDataSet.productoDataTable dataTable = new discotequeDataSet.productoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(discotequeDataSet.productoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual discotequeDataSet.productoDataTable ProductoTipo() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             discotequeDataSet.productoDataTable dataTable = new discotequeDataSet.productoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
