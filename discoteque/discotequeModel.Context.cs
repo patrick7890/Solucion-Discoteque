@@ -32,7 +32,5 @@ namespace discoteque
         public DbSet<tiposala> tiposala { get; set; }
         public DbSet<tipousuario> tipousuario { get; set; }
         public DbSet<usuario> usuario { get; set; }
-        public DbSet<comanda_producto> comanda_producto { get; set; }
-        public DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

@@ -30,11 +30,7 @@ namespace discoteque
 
         private void btnProductoDeBaja_Click(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSetData.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.ListaDaoDeBaja(this.discotequeDataSetData.producto);
-            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSetData.tipoproducto' Puede moverla o quitarla según sea necesario.
-            this.tipoproductoTableAdapter.Fill(this.discotequeDataSetData.tipoproducto);
-            this.panel1.RefreshReport();
+
         }
     }
 }

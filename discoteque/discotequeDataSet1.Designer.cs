@@ -20,9 +20,9 @@ namespace discoteque {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("discotequeDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("discotequeDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class discotequeDataSet1 : global::System.Data.DataSet {
+    public partial class discotequeDataSet : global::System.Data.DataSet {
         
         private atencionDataTable tableatencion;
         
@@ -58,7 +58,7 @@ namespace discoteque {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public discotequeDataSet1() {
+        public discotequeDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -69,7 +69,7 @@ namespace discoteque {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected discotequeDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected discotequeDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -246,7 +246,7 @@ namespace discoteque {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            discotequeDataSet1 cln = ((discotequeDataSet1)(base.Clone()));
+            discotequeDataSet cln = ((discotequeDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -388,7 +388,7 @@ namespace discoteque {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "discotequeDataSet1";
+            this.DataSetName = "discotequeDataSet";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/discotequeDataSet1.xsd";
             this.EnforceConstraints = true;
@@ -500,7 +500,7 @@ namespace discoteque {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            discotequeDataSet1 ds = new discotequeDataSet1();
+            discotequeDataSet ds = new discotequeDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -868,7 +868,7 @@ namespace discoteque {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                discotequeDataSet1 ds = new discotequeDataSet1();
+                discotequeDataSet ds = new discotequeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1175,7 +1175,7 @@ namespace discoteque {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                discotequeDataSet1 ds = new discotequeDataSet1();
+                discotequeDataSet ds = new discotequeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1444,7 +1444,7 @@ namespace discoteque {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                discotequeDataSet1 ds = new discotequeDataSet1();
+                discotequeDataSet ds = new discotequeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1785,7 +1785,7 @@ namespace discoteque {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                discotequeDataSet1 ds = new discotequeDataSet1();
+                discotequeDataSet ds = new discotequeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2063,7 +2063,7 @@ namespace discoteque {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                discotequeDataSet1 ds = new discotequeDataSet1();
+                discotequeDataSet ds = new discotequeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2341,7 +2341,7 @@ namespace discoteque {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                discotequeDataSet1 ds = new discotequeDataSet1();
+                discotequeDataSet ds = new discotequeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2619,7 +2619,7 @@ namespace discoteque {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                discotequeDataSet1 ds = new discotequeDataSet1();
+                discotequeDataSet ds = new discotequeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2962,7 +2962,7 @@ namespace discoteque {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                discotequeDataSet1 ds = new discotequeDataSet1();
+                discotequeDataSet ds = new discotequeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3909,7 +3909,7 @@ namespace discoteque {
         }
     }
 }
-namespace discoteque.discotequeDataSet1TableAdapters {
+namespace discoteque.discotequeDataSetTableAdapters {
     
     
     /// <summary>
@@ -4043,7 +4043,7 @@ namespace discoteque.discotequeDataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[atencion] WHERE (([idatencion] = @Original_idatencion) AND ([totalatencion] = @Original_totalatencion) AND ([faturada] = @Original_faturada) AND ([propina] = @Original_propina) AND ([fecha] = @Original_fecha) AND ([usuario_idusuario] = @Original_usuario_idusuario) AND ([tipoSala_idtipoSala] = @Original_tipoSala_idtipoSala))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [discoteque].[atencion] WHERE (([idatencion] = @Original_idatencion) AND ([totalatencion] = @Original_totalatencion) AND ([faturada] = @Original_faturada) AND ([propina] = @Original_propina) AND ([fecha] = @Original_fecha) AND ([usuario_idusuario] = @Original_usuario_idusuario) AND ([tipoSala_idtipoSala] = @Original_tipoSala_idtipoSala))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idatencion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idatencion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_totalatencion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalatencion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4054,8 +4054,8 @@ namespace discoteque.discotequeDataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoSala_idtipoSala", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoSala_idtipoSala", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[atencion] ([totalatencion], [faturada], [propina], [fecha], [usuario_idusuario], [tipoSala_idtipoSala]) VALUES (@totalatencion, @faturada, @propina, @fecha, @usuario_idusuario, @tipoSala_idtipoSala);
-SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, tipoSala_idtipoSala FROM atencion WHERE (idatencion = SCOPE_IDENTITY()) AND (usuario_idusuario = @usuario_idusuario)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [discoteque].[atencion] ([totalatencion], [faturada], [propina], [fecha], [usuario_idusuario], [tipoSala_idtipoSala]) VALUES (@totalatencion, @faturada, @propina, @fecha, @usuario_idusuario, @tipoSala_idtipoSala);
+SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, tipoSala_idtipoSala FROM discoteque.atencion WHERE (idatencion = SCOPE_IDENTITY()) AND (usuario_idusuario = @usuario_idusuario)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalatencion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalatencion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@faturada", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "faturada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4065,8 +4065,8 @@ SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, t
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoSala_idtipoSala", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoSala_idtipoSala", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[atencion] SET [totalatencion] = @totalatencion, [faturada] = @faturada, [propina] = @propina, [fecha] = @fecha, [usuario_idusuario] = @usuario_idusuario, [tipoSala_idtipoSala] = @tipoSala_idtipoSala WHERE (([idatencion] = @Original_idatencion) AND ([totalatencion] = @Original_totalatencion) AND ([faturada] = @Original_faturada) AND ([propina] = @Original_propina) AND ([fecha] = @Original_fecha) AND ([usuario_idusuario] = @Original_usuario_idusuario) AND ([tipoSala_idtipoSala] = @Original_tipoSala_idtipoSala));
-SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, tipoSala_idtipoSala FROM atencion WHERE (idatencion = @idatencion) AND (usuario_idusuario = @usuario_idusuario)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [discoteque].[atencion] SET [totalatencion] = @totalatencion, [faturada] = @faturada, [propina] = @propina, [fecha] = @fecha, [usuario_idusuario] = @usuario_idusuario, [tipoSala_idtipoSala] = @tipoSala_idtipoSala WHERE (([idatencion] = @Original_idatencion) AND ([totalatencion] = @Original_totalatencion) AND ([faturada] = @Original_faturada) AND ([propina] = @Original_propina) AND ([fecha] = @Original_fecha) AND ([usuario_idusuario] = @Original_usuario_idusuario) AND ([tipoSala_idtipoSala] = @Original_tipoSala_idtipoSala));
+SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, tipoSala_idtipoSala FROM discoteque.atencion WHERE (idatencion = @idatencion) AND (usuario_idusuario = @usuario_idusuario)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalatencion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalatencion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@faturada", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "faturada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4098,7 +4098,7 @@ SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, t
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, ti" +
-                "poSala_idtipoSala FROM dbo.atencion";
+                "poSala_idtipoSala FROM discoteque.atencion";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4106,7 +4106,7 @@ SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, t
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(discotequeDataSet1.atencionDataTable dataTable) {
+        public virtual int Fill(discotequeDataSet.atencionDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4119,9 +4119,9 @@ SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, t
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual discotequeDataSet1.atencionDataTable GetData() {
+        public virtual discotequeDataSet.atencionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            discotequeDataSet1.atencionDataTable dataTable = new discotequeDataSet1.atencionDataTable();
+            discotequeDataSet.atencionDataTable dataTable = new discotequeDataSet.atencionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4129,14 +4129,14 @@ SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, t
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1.atencionDataTable dataTable) {
+        public virtual int Update(discotequeDataSet.atencionDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1 dataSet) {
+        public virtual int Update(discotequeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "atencion");
         }
         
@@ -4382,10 +4382,7 @@ SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, t
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[comanda] WHERE (([idcomanda] = @Original_idcomanda) AND ([tota" +
-                "lcomanda] = @Original_totalcomanda) AND ([atencion_idatencion] = @Original_atenc" +
-                "ion_idatencion) AND ([atencion_usuario_idusuario] = @Original_atencion_usuario_i" +
-                "dusuario))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [discoteque].[comanda] WHERE (([idcomanda] = @Original_idcomanda) AND ([totalcomanda] = @Original_totalcomanda) AND ([atencion_idatencion] = @Original_atencion_idatencion) AND ([atencion_usuario_idusuario] = @Original_atencion_usuario_idusuario))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idcomanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idcomanda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_totalcomanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalcomanda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4393,16 +4390,16 @@ SELECT idatencion, totalatencion, faturada, propina, fecha, usuario_idusuario, t
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_atencion_usuario_idusuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "atencion_usuario_idusuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[comanda] ([totalcomanda], [atencion_idatencion], [atencion_usuario_idusuario]) VALUES (@totalcomanda, @atencion_idatencion, @atencion_usuario_idusuario);
-SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario FROM comanda WHERE (idcomanda = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [discoteque].[comanda] ([totalcomanda], [atencion_idatencion], [atencion_usuario_idusuario]) VALUES (@totalcomanda, @atencion_idatencion, @atencion_usuario_idusuario);
+SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario FROM discoteque.comanda WHERE (idcomanda = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalcomanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalcomanda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@atencion_idatencion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "atencion_idatencion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@atencion_usuario_idusuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "atencion_usuario_idusuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[comanda] SET [totalcomanda] = @totalcomanda, [atencion_idatencion] = @atencion_idatencion, [atencion_usuario_idusuario] = @atencion_usuario_idusuario WHERE (([idcomanda] = @Original_idcomanda) AND ([totalcomanda] = @Original_totalcomanda) AND ([atencion_idatencion] = @Original_atencion_idatencion) AND ([atencion_usuario_idusuario] = @Original_atencion_usuario_idusuario));
-SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario FROM comanda WHERE (idcomanda = @idcomanda)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [discoteque].[comanda] SET [totalcomanda] = @totalcomanda, [atencion_idatencion] = @atencion_idatencion, [atencion_usuario_idusuario] = @atencion_usuario_idusuario WHERE (([idcomanda] = @Original_idcomanda) AND ([totalcomanda] = @Original_totalcomanda) AND ([atencion_idatencion] = @Original_atencion_idatencion) AND ([atencion_usuario_idusuario] = @Original_atencion_usuario_idusuario));
+SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario FROM discoteque.comanda WHERE (idcomanda = @idcomanda)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalcomanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalcomanda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@atencion_idatencion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "atencion_idatencion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4428,7 +4425,7 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario F" +
-                "ROM dbo.comanda";
+                "ROM discoteque.comanda";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4436,7 +4433,7 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(discotequeDataSet1.comandaDataTable dataTable) {
+        public virtual int Fill(discotequeDataSet.comandaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4449,9 +4446,9 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual discotequeDataSet1.comandaDataTable GetData() {
+        public virtual discotequeDataSet.comandaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            discotequeDataSet1.comandaDataTable dataTable = new discotequeDataSet1.comandaDataTable();
+            discotequeDataSet.comandaDataTable dataTable = new discotequeDataSet.comandaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4459,14 +4456,14 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1.comandaDataTable dataTable) {
+        public virtual int Update(discotequeDataSet.comandaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1 dataSet) {
+        public virtual int Update(discotequeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "comanda");
         }
         
@@ -4698,8 +4695,8 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[comanda_producto] ([producto_idproducto], [comanda_idcomanda])" +
-                " VALUES (@producto_idproducto, @comanda_idcomanda)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [discoteque].[comanda_producto] ([producto_idproducto], [comanda_idco" +
+                "manda]) VALUES (@producto_idproducto, @comanda_idcomanda)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@producto_idproducto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "producto_idproducto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comanda_idcomanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comanda_idcomanda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4718,7 +4715,7 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT producto_idproducto, comanda_idcomanda FROM dbo.comanda_producto";
+            this._commandCollection[0].CommandText = "SELECT producto_idproducto, comanda_idcomanda FROM discoteque.comanda_producto";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4726,7 +4723,7 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(discotequeDataSet1.comanda_productoDataTable dataTable) {
+        public virtual int Fill(discotequeDataSet.comanda_productoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4739,9 +4736,9 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual discotequeDataSet1.comanda_productoDataTable GetData() {
+        public virtual discotequeDataSet.comanda_productoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            discotequeDataSet1.comanda_productoDataTable dataTable = new discotequeDataSet1.comanda_productoDataTable();
+            discotequeDataSet.comanda_productoDataTable dataTable = new discotequeDataSet.comanda_productoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4749,14 +4746,14 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1.comanda_productoDataTable dataTable) {
+        public virtual int Update(discotequeDataSet.comanda_productoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1 dataSet) {
+        public virtual int Update(discotequeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "comanda_producto");
         }
         
@@ -4929,7 +4926,7 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[producto] WHERE (([idproducto] = @Original_idproducto) AND ([nombreProducto] = @Original_nombreProducto) AND ([precio] = @Original_precio) AND ([stock] = @Original_stock) AND ([enVenta] = @Original_enVenta) AND ([tipoProducto_idtipoProducto] = @Original_tipoProducto_idtipoProducto))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [discoteque].[producto] WHERE (([idproducto] = @Original_idproducto) AND ([nombreProducto] = @Original_nombreProducto) AND ([precio] = @Original_precio) AND ([stock] = @Original_stock) AND ([enVenta] = @Original_enVenta) AND ([tipoProducto_idtipoProducto] = @Original_tipoProducto_idtipoProducto))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idproducto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idproducto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombreProducto", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreProducto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4939,8 +4936,8 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoProducto_idtipoProducto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoProducto_idtipoProducto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[producto] ([nombreProducto], [precio], [stock], [enVenta], [tipoProducto_idtipoProducto]) VALUES (@nombreProducto, @precio, @stock, @enVenta, @tipoProducto_idtipoProducto);
-SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoProducto FROM producto WHERE (idproducto = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [discoteque].[producto] ([nombreProducto], [precio], [stock], [enVenta], [tipoProducto_idtipoProducto]) VALUES (@nombreProducto, @precio, @stock, @enVenta, @tipoProducto_idtipoProducto);
+SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoProducto FROM discoteque.producto WHERE (idproducto = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreProducto", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreProducto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4949,8 +4946,8 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoProducto_idtipoProducto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoProducto_idtipoProducto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[producto] SET [nombreProducto] = @nombreProducto, [precio] = @precio, [stock] = @stock, [enVenta] = @enVenta, [tipoProducto_idtipoProducto] = @tipoProducto_idtipoProducto WHERE (([idproducto] = @Original_idproducto) AND ([nombreProducto] = @Original_nombreProducto) AND ([precio] = @Original_precio) AND ([stock] = @Original_stock) AND ([enVenta] = @Original_enVenta) AND ([tipoProducto_idtipoProducto] = @Original_tipoProducto_idtipoProducto));
-SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoProducto FROM producto WHERE (idproducto = @idproducto)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [discoteque].[producto] SET [nombreProducto] = @nombreProducto, [precio] = @precio, [stock] = @stock, [enVenta] = @enVenta, [tipoProducto_idtipoProducto] = @tipoProducto_idtipoProducto WHERE (([idproducto] = @Original_idproducto) AND ([nombreProducto] = @Original_nombreProducto) AND ([precio] = @Original_precio) AND ([stock] = @Original_stock) AND ([enVenta] = @Original_enVenta) AND ([tipoProducto_idtipoProducto] = @Original_tipoProducto_idtipoProducto));
+SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoProducto FROM discoteque.producto WHERE (idproducto = @idproducto)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreProducto", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreProducto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4980,7 +4977,7 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPro" +
-                "ducto FROM dbo.producto";
+                "ducto FROM discoteque.producto";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4988,7 +4985,7 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(discotequeDataSet1.productoDataTable dataTable) {
+        public virtual int Fill(discotequeDataSet.productoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5001,9 +4998,9 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual discotequeDataSet1.productoDataTable GetData() {
+        public virtual discotequeDataSet.productoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            discotequeDataSet1.productoDataTable dataTable = new discotequeDataSet1.productoDataTable();
+            discotequeDataSet.productoDataTable dataTable = new discotequeDataSet.productoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5011,14 +5008,14 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1.productoDataTable dataTable) {
+        public virtual int Update(discotequeDataSet.productoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1 dataSet) {
+        public virtual int Update(discotequeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "producto");
         }
         
@@ -5278,22 +5275,22 @@ SELECT idproducto, nombreProducto, precio, stock, enVenta, tipoProducto_idtipoPr
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tipoproducto] WHERE (([idtipoProducto] = @Original_idtipoProdu" +
-                "cto) AND ([descripcionTipoP] = @Original_descripcionTipoP))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [discoteque].[tipoproducto] WHERE (([idtipoProducto] = @Original_idti" +
+                "poProducto) AND ([descripcionTipoP] = @Original_descripcionTipoP))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idtipoProducto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idtipoProducto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_descripcionTipoP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcionTipoP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tipoproducto] ([descripcionTipoP]) VALUES (@descripcionTipoP);" +
-                "\r\nSELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProduct" +
-                "o = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [discoteque].[tipoproducto] ([descripcionTipoP]) VALUES (@descripcion" +
+                "TipoP);\r\nSELECT idtipoProducto, descripcionTipoP FROM discoteque.tipoproducto WH" +
+                "ERE (idtipoProducto = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripcionTipoP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcionTipoP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tipoproducto] SET [descripcionTipoP] = @descripcionTipoP WHERE (([idtipoProducto] = @Original_idtipoProducto) AND ([descripcionTipoP] = @Original_descripcionTipoP));
-SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto = @idtipoProducto)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [discoteque].[tipoproducto] SET [descripcionTipoP] = @descripcionTipoP WHERE (([idtipoProducto] = @Original_idtipoProducto) AND ([descripcionTipoP] = @Original_descripcionTipoP));
+SELECT idtipoProducto, descripcionTipoP FROM discoteque.tipoproducto WHERE (idtipoProducto = @idtipoProducto)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripcionTipoP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcionTipoP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idtipoProducto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idtipoProducto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5314,7 +5311,7 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idtipoProducto, descripcionTipoP FROM dbo.tipoproducto";
+            this._commandCollection[0].CommandText = "SELECT idtipoProducto, descripcionTipoP FROM discoteque.tipoproducto";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5322,7 +5319,7 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(discotequeDataSet1.tipoproductoDataTable dataTable) {
+        public virtual int Fill(discotequeDataSet.tipoproductoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5335,9 +5332,9 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual discotequeDataSet1.tipoproductoDataTable GetData() {
+        public virtual discotequeDataSet.tipoproductoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            discotequeDataSet1.tipoproductoDataTable dataTable = new discotequeDataSet1.tipoproductoDataTable();
+            discotequeDataSet.tipoproductoDataTable dataTable = new discotequeDataSet.tipoproductoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5345,14 +5342,14 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1.tipoproductoDataTable dataTable) {
+        public virtual int Update(discotequeDataSet.tipoproductoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1 dataSet) {
+        public virtual int Update(discotequeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tipoproducto");
         }
         
@@ -5596,22 +5593,24 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tiposala] WHERE (([idtipoSala] = @Original_idtipoSala) AND ([d" +
-                "esctipoSala] = @Original_desctipoSala))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [discoteque].[tiposala] WHERE (([idtipoSala] = @Original_idtipoSala) " +
+                "AND ([desctipoSala] = @Original_desctipoSala))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idtipoSala", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idtipoSala", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_desctipoSala", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "desctipoSala", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tiposala] ([desctipoSala]) VALUES (@desctipoSala);\r\nSELECT idt" +
-                "ipoSala, desctipoSala FROM tiposala WHERE (idtipoSala = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [discoteque].[tiposala] ([desctipoSala]) VALUES (@desctipoSala);\r\nSEL" +
+                "ECT idtipoSala, desctipoSala FROM discoteque.tiposala WHERE (idtipoSala = SCOPE_" +
+                "IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@desctipoSala", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "desctipoSala", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tiposala] SET [desctipoSala] = @desctipoSala WHERE (([idtipoSala] =" +
-                " @Original_idtipoSala) AND ([desctipoSala] = @Original_desctipoSala));\r\nSELECT i" +
-                "dtipoSala, desctipoSala FROM tiposala WHERE (idtipoSala = @idtipoSala)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [discoteque].[tiposala] SET [desctipoSala] = @desctipoSala WHERE (([idtipo" +
+                "Sala] = @Original_idtipoSala) AND ([desctipoSala] = @Original_desctipoSala));\r\nS" +
+                "ELECT idtipoSala, desctipoSala FROM discoteque.tiposala WHERE (idtipoSala = @idt" +
+                "ipoSala)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@desctipoSala", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "desctipoSala", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idtipoSala", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idtipoSala", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5632,7 +5631,7 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idtipoSala, desctipoSala FROM dbo.tiposala";
+            this._commandCollection[0].CommandText = "SELECT idtipoSala, desctipoSala FROM discoteque.tiposala";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5640,7 +5639,7 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(discotequeDataSet1.tiposalaDataTable dataTable) {
+        public virtual int Fill(discotequeDataSet.tiposalaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5653,9 +5652,9 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual discotequeDataSet1.tiposalaDataTable GetData() {
+        public virtual discotequeDataSet.tiposalaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            discotequeDataSet1.tiposalaDataTable dataTable = new discotequeDataSet1.tiposalaDataTable();
+            discotequeDataSet.tiposalaDataTable dataTable = new discotequeDataSet.tiposalaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5663,14 +5662,14 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1.tiposalaDataTable dataTable) {
+        public virtual int Update(discotequeDataSet.tiposalaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1 dataSet) {
+        public virtual int Update(discotequeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tiposala");
         }
         
@@ -5914,22 +5913,22 @@ SELECT idtipoProducto, descripcionTipoP FROM tipoproducto WHERE (idtipoProducto 
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tipousuario] WHERE (([idtipoUsuario] = @Original_idtipoUsuario" +
-                ") AND ([descripciontipoU] = @Original_descripciontipoU))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [discoteque].[tipousuario] WHERE (([idtipoUsuario] = @Original_idtipo" +
+                "Usuario) AND ([descripciontipoU] = @Original_descripciontipoU))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idtipoUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idtipoUsuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_descripciontipoU", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripciontipoU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tipousuario] ([descripciontipoU]) VALUES (@descripciontipoU);\r" +
-                "\nSELECT idtipoUsuario, descripciontipoU FROM tipousuario WHERE (idtipoUsuario = " +
-                "SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [discoteque].[tipousuario] ([descripciontipoU]) VALUES (@descripciont" +
+                "ipoU);\r\nSELECT idtipoUsuario, descripciontipoU FROM discoteque.tipousuario WHERE" +
+                " (idtipoUsuario = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripciontipoU", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripciontipoU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tipousuario] SET [descripciontipoU] = @descripciontipoU WHERE (([idtipoUsuario] = @Original_idtipoUsuario) AND ([descripciontipoU] = @Original_descripciontipoU));
-SELECT idtipoUsuario, descripciontipoU FROM tipousuario WHERE (idtipoUsuario = @idtipoUsuario)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [discoteque].[tipousuario] SET [descripciontipoU] = @descripciontipoU WHERE (([idtipoUsuario] = @Original_idtipoUsuario) AND ([descripciontipoU] = @Original_descripciontipoU));
+SELECT idtipoUsuario, descripciontipoU FROM discoteque.tipousuario WHERE (idtipoUsuario = @idtipoUsuario)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripciontipoU", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripciontipoU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idtipoUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idtipoUsuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5950,7 +5949,7 @@ SELECT idtipoUsuario, descripciontipoU FROM tipousuario WHERE (idtipoUsuario = @
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idtipoUsuario, descripciontipoU FROM dbo.tipousuario";
+            this._commandCollection[0].CommandText = "SELECT idtipoUsuario, descripciontipoU FROM discoteque.tipousuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5958,7 +5957,7 @@ SELECT idtipoUsuario, descripciontipoU FROM tipousuario WHERE (idtipoUsuario = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(discotequeDataSet1.tipousuarioDataTable dataTable) {
+        public virtual int Fill(discotequeDataSet.tipousuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5971,9 +5970,9 @@ SELECT idtipoUsuario, descripciontipoU FROM tipousuario WHERE (idtipoUsuario = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual discotequeDataSet1.tipousuarioDataTable GetData() {
+        public virtual discotequeDataSet.tipousuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            discotequeDataSet1.tipousuarioDataTable dataTable = new discotequeDataSet1.tipousuarioDataTable();
+            discotequeDataSet.tipousuarioDataTable dataTable = new discotequeDataSet.tipousuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5981,14 +5980,14 @@ SELECT idtipoUsuario, descripciontipoU FROM tipousuario WHERE (idtipoUsuario = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1.tipousuarioDataTable dataTable) {
+        public virtual int Update(discotequeDataSet.tipousuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1 dataSet) {
+        public virtual int Update(discotequeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tipousuario");
         }
         
@@ -6236,7 +6235,7 @@ SELECT idtipoUsuario, descripciontipoU FROM tipousuario WHERE (idtipoUsuario = @
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[usuario] WHERE (([idusuario] = @Original_idusuario) AND ([nombreusuario] = @Original_nombreusuario) AND ([passusuario] = @Original_passusuario) AND ([cuentausuario] = @Original_cuentausuario) AND ([activo] = @Original_activo) AND ([tipoUsuario_idtipoUsuario] = @Original_tipoUsuario_idtipoUsuario))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [discoteque].[usuario] WHERE (([idusuario] = @Original_idusuario) AND ([nombreusuario] = @Original_nombreusuario) AND ([passusuario] = @Original_passusuario) AND ([cuentausuario] = @Original_cuentausuario) AND ([activo] = @Original_activo) AND ([tipoUsuario_idtipoUsuario] = @Original_tipoUsuario_idtipoUsuario))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idusuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idusuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombreusuario", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreusuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -6246,8 +6245,8 @@ SELECT idtipoUsuario, descripciontipoU FROM tipousuario WHERE (idtipoUsuario = @
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoUsuario_idtipoUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoUsuario_idtipoUsuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[usuario] ([nombreusuario], [passusuario], [cuentausuario], [activo], [tipoUsuario_idtipoUsuario]) VALUES (@nombreusuario, @passusuario, @cuentausuario, @activo, @tipoUsuario_idtipoUsuario);
-SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario_idtipoUsuario FROM usuario WHERE (idusuario = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [discoteque].[usuario] ([nombreusuario], [passusuario], [cuentausuario], [activo], [tipoUsuario_idtipoUsuario]) VALUES (@nombreusuario, @passusuario, @cuentausuario, @activo, @tipoUsuario_idtipoUsuario);
+SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario_idtipoUsuario FROM discoteque.usuario WHERE (idusuario = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreusuario", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreusuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@passusuario", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "passusuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6256,8 +6255,8 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoUsuario_idtipoUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoUsuario_idtipoUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[usuario] SET [nombreusuario] = @nombreusuario, [passusuario] = @passusuario, [cuentausuario] = @cuentausuario, [activo] = @activo, [tipoUsuario_idtipoUsuario] = @tipoUsuario_idtipoUsuario WHERE (([idusuario] = @Original_idusuario) AND ([nombreusuario] = @Original_nombreusuario) AND ([passusuario] = @Original_passusuario) AND ([cuentausuario] = @Original_cuentausuario) AND ([activo] = @Original_activo) AND ([tipoUsuario_idtipoUsuario] = @Original_tipoUsuario_idtipoUsuario));
-SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario_idtipoUsuario FROM usuario WHERE (idusuario = @idusuario)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [discoteque].[usuario] SET [nombreusuario] = @nombreusuario, [passusuario] = @passusuario, [cuentausuario] = @cuentausuario, [activo] = @activo, [tipoUsuario_idtipoUsuario] = @tipoUsuario_idtipoUsuario WHERE (([idusuario] = @Original_idusuario) AND ([nombreusuario] = @Original_nombreusuario) AND ([passusuario] = @Original_passusuario) AND ([cuentausuario] = @Original_cuentausuario) AND ([activo] = @Original_activo) AND ([tipoUsuario_idtipoUsuario] = @Original_tipoUsuario_idtipoUsuario));
+SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario_idtipoUsuario FROM discoteque.usuario WHERE (idusuario = @idusuario)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreusuario", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreusuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@passusuario", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "passusuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6287,7 +6286,7 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario_" +
-                "idtipoUsuario FROM dbo.usuario";
+                "idtipoUsuario FROM discoteque.usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6295,7 +6294,7 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(discotequeDataSet1.usuarioDataTable dataTable) {
+        public virtual int Fill(discotequeDataSet.usuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6308,9 +6307,9 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual discotequeDataSet1.usuarioDataTable GetData() {
+        public virtual discotequeDataSet.usuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            discotequeDataSet1.usuarioDataTable dataTable = new discotequeDataSet1.usuarioDataTable();
+            discotequeDataSet.usuarioDataTable dataTable = new discotequeDataSet.usuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6318,14 +6317,14 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1.usuarioDataTable dataTable) {
+        public virtual int Update(discotequeDataSet.usuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(discotequeDataSet1 dataSet) {
+        public virtual int Update(discotequeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "usuario");
         }
         
@@ -6751,7 +6750,7 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(discotequeDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(discotequeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tipousuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tipousuario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -6833,7 +6832,7 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(discotequeDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(discotequeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tipousuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tipousuario.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -6907,7 +6906,7 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(discotequeDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(discotequeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._comanda_productoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.comanda_producto.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -7005,7 +7004,7 @@ SELECT idusuario, nombreusuario, passusuario, cuentausuario, activo, tipoUsuario
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(discotequeDataSet1 dataSet) {
+        public virtual int UpdateAll(discotequeDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

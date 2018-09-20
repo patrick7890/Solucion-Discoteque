@@ -19,8 +19,8 @@ namespace discoteque
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
+           
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

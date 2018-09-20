@@ -4,23 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="036584dfebfc4cb0ab8526d3fd9db945" Name="Diagram1">
+      <Diagram DiagramId="37936c33513b4879b957bceb58de92aa" Name="Diagram1">
         <EntityTypeShape EntityType="discotequeModel.atencion" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="discotequeModel.comanda" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="discotequeModel.producto" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="discotequeModel.tipoproducto" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="discotequeModel.producto" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="discotequeModel.tipoproducto" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="discotequeModel.tiposala" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="discotequeModel.tipousuario" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="discotequeModel.usuario" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="discotequeModel.comanda_producto" PointX="9.75" PointY="3.5" Width="1.5" IsExpanded="true" />
         <AssociationConnector Association="discotequeModel.atencion_fk_atencion_tipoSala1" ManuallyRouted="false" />
         <AssociationConnector Association="discotequeModel.atencion_fk_atencion_usuario1" ManuallyRouted="false" />
         <AssociationConnector Association="discotequeModel.comanda_fk_comanda_atencion1" ManuallyRouted="false" />
-        <AssociationConnector ManuallyRouted="false" Association="discotequeModel.comanda_producto_fk_comanda_producto_comanda1" />
-        <AssociationConnector ManuallyRouted="false" Association="discotequeModel.comanda_producto_fk_comanda_producto_producto1" />
         <AssociationConnector Association="discotequeModel.producto_fk_producto_tipoProducto1" ManuallyRouted="false" />
         <AssociationConnector Association="discotequeModel.usuario_fk_usuario_tipoUsuario" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="discotequeModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.75" />
+        <AssociationConnector Association="discotequeModel.comanda_producto" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
