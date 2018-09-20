@@ -225,6 +225,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\atenciones.rdlc" />
     <EmbeddedResource Include="Reportes\ProductosDadosBaja.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>

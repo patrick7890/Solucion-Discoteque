@@ -214,7 +214,6 @@
         private MetroFramework.Controls.MetroButton btnProductoDeBaja;
         private System.Windows.Forms.GroupBox groupBox5;
         private MetroFramework.Controls.MetroButton btnListarProducto;
-        private System.Windows.Forms.BindingSource productoBindingSource;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private discotequeDataSet discotequeDataSet;
         private System.Windows.Forms.BindingSource bindingSource1;

@@ -30,20 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.btnBodega = new MetroFramework.Controls.MetroButton();
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.discotequeDataSet = new discoteque.discotequeDataSet();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
-            this.tipoproductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoproductoTableAdapter = new discoteque.discotequeDataSetTableAdapters.tipoproductoTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // atencionBindingSource
+            // 
+            this.atencionBindingSource.DataMember = "atencion";
+            this.atencionBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // discotequeDataSet
+            // 
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnLogin
             // 
@@ -75,59 +81,36 @@
             this.btnBodega.UseSelectable = true;
             this.btnBodega.Click += new System.EventHandler(this.btnBodega_Click);
             // 
-            // reportViewer2
+            // reportViewer1
             // 
-            reportDataSource1.Name = "Prodcuto";
-            reportDataSource1.Value = this.productoBindingSource;
-            reportDataSource2.Name = "TiposP";
-            reportDataSource2.Value = this.tipoproductoBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.reporteBodega.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(23, 90);
-            this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(488, 309);
-            this.reportViewer2.TabIndex = 5;
+            reportDataSource1.Name = "Atencion";
+            reportDataSource1.Value = this.atencionBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.atenciones.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(37, 81);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(474, 320);
+            this.reportViewer1.TabIndex = 4;
             // 
-            // discotequeDataSet
+            // atencionTableAdapter
             // 
-            this.discotequeDataSet.DataSetName = "discotequeDataSet";
-            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "producto";
-            this.productoBindingSource.DataSource = this.discotequeDataSet;
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tipoproductoBindingSource
-            // 
-            this.tipoproductoBindingSource.DataMember = "tipoproducto";
-            this.tipoproductoBindingSource.DataSource = this.discotequeDataSet;
-            // 
-            // tipoproductoTableAdapter
-            // 
-            this.tipoproductoTableAdapter.ClearBeforeFill = true;
+            this.atencionTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer2);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnBodega);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.btnLogin);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,12 +119,10 @@
         private MetroFramework.Controls.MetroButton btnLogin;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton btnBodega;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
-        private System.Windows.Forms.BindingSource productoBindingSource;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource atencionBindingSource;
         private discotequeDataSet discotequeDataSet;
-        private System.Windows.Forms.BindingSource tipoproductoBindingSource;
-        private discotequeDataSetTableAdapters.productoTableAdapter productoTableAdapter;
-        private discotequeDataSetTableAdapters.tipoproductoTableAdapter tipoproductoTableAdapter;
+        private discotequeDataSetTableAdapters.atencionTableAdapter atencionTableAdapter;
     }
 }
 
