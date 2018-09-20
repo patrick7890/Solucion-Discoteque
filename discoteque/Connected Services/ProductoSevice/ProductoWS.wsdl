@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservice/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ProductoWS" targetNamespace="http://webservice/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/discoteque/ProductoWS?xsd=1" namespace="http://webservice/" />
+    </xsd:schema>
+  </types>
+  <message name="listar">
+    <part name="parameters" element="tns:listar" />
+  </message>
+  <message name="listarResponse">
+    <part name="parameters" element="tns:listarResponse" />
+  </message>
+  <message name="buscarProducto">
+    <part name="parameters" element="tns:buscarProducto" />
+  </message>
+  <message name="buscarProductoResponse">
+    <part name="parameters" element="tns:buscarProductoResponse" />
+  </message>
+  <message name="eliminar">
+    <part name="parameters" element="tns:eliminar" />
+  </message>
+  <message name="eliminarResponse">
+    <part name="parameters" element="tns:eliminarResponse" />
+  </message>
+  <message name="Actualizar">
+    <part name="parameters" element="tns:Actualizar" />
+  </message>
+  <message name="ActualizarResponse">
+    <part name="parameters" element="tns:ActualizarResponse" />
+  </message>
+  <message name="IngresarProducto">
+    <part name="parameters" element="tns:IngresarProducto" />
+  </message>
+  <message name="IngresarProductoResponse">
+    <part name="parameters" element="tns:IngresarProductoResponse" />
+  </message>
+  <portType name="ProductoWS">
+    <operation name="listar">
+      <input wsam:Action="http://webservice/ProductoWS/listarRequest" message="tns:listar" />
+      <output wsam:Action="http://webservice/ProductoWS/listarResponse" message="tns:listarResponse" />
+    </operation>
+    <operation name="buscarProducto">
+      <input wsam:Action="http://webservice/ProductoWS/buscarProductoRequest" message="tns:buscarProducto" />
+      <output wsam:Action="http://webservice/ProductoWS/buscarProductoResponse" message="tns:buscarProductoResponse" />
+    </operation>
+    <operation name="eliminar">
+      <input wsam:Action="http://webservice/ProductoWS/eliminarRequest" message="tns:eliminar" />
+      <output wsam:Action="http://webservice/ProductoWS/eliminarResponse" message="tns:eliminarResponse" />
+    </operation>
+    <operation name="Actualizar">
+      <input wsam:Action="http://webservice/ProductoWS/ActualizarRequest" message="tns:Actualizar" />
+      <output wsam:Action="http://webservice/ProductoWS/ActualizarResponse" message="tns:ActualizarResponse" />
+    </operation>
+    <operation name="IngresarProducto">
+      <input wsam:Action="http://webservice/ProductoWS/IngresarProductoRequest" message="tns:IngresarProducto" />
+      <output wsam:Action="http://webservice/ProductoWS/IngresarProductoResponse" message="tns:IngresarProductoResponse" />
+    </operation>
+  </portType>
+  <binding name="ProductoWSPortBinding" type="tns:ProductoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Actualizar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ProductoWS">
+    <port name="ProductoWSPort" binding="tns:ProductoWSPortBinding">
+      <soap:address location="http://localhost:8080/discoteque/ProductoWS" />
+    </port>
+  </service>
+</definitions>

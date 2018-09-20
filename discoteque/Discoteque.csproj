@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -60,8 +63,16 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,19 +82,173 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="atencion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Atenciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atenciones.Designer.cs">
+      <DependentUpon>Atenciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="comanda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="comanda_producto.cs">
+      <DependentUpon>discotequeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ProductoSevice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UsuarioService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="discotequeDataSet.cs">
+      <DependentUpon>discotequeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="discotequeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>discotequeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="discotequeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>discotequeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="discotequeDataSetData.cs">
+      <DependentUpon>discotequeDataSetData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="discotequeDataSetData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>discotequeDataSetData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="discotequeModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>discotequeModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="discotequeModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>discotequeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="discotequeModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>discotequeModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CrearAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CrearAtencion.Designer.cs">
+      <DependentUpon>CrearAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaBodega.Designer.cs">
+      <DependentUpon>ListaBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaComanda.Designer.cs">
+      <DependentUpon>ListaComanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoProductos.Designer.cs">
+      <DependentUpon>ListadoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="producto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipoproducto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tiposala.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipousuario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Atenciones.resx">
+      <DependentUpon>Atenciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CrearAtencion.resx">
+      <DependentUpon>CrearAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaBodega.resx">
+      <DependentUpon>ListaBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaComanda.resx">
+      <DependentUpon>ListaComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoProductos.resx">
+      <DependentUpon>ListadoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +259,83 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\ProductosDadosBaja.rdlc" />
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.ActualizarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.buscarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.IngresarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoSevice\ProductoWS.wsdl" />
+    <None Include="Connected Services\ProductoSevice\ProductoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioService\discoteque.UsuarioService.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioService\UsuarioWS.wsdl" />
+    <None Include="Connected Services\UsuarioService\UsuarioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="discotequeModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>discotequeModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="discotequeDataSet.xsc">
+      <DependentUpon>discotequeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="discotequeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>discotequeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="discotequeDataSet.xss">
+      <DependentUpon>discotequeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="discotequeDataSet1.xsc">
+      <DependentUpon>discotequeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="discotequeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>discotequeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="discotequeDataSet1.xss">
+      <DependentUpon>discotequeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="discotequeDataSetData.xsc">
+      <DependentUpon>discotequeDataSetData.xsd</DependentUpon>
+    </None>
+    <None Include="discotequeDataSetData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>discotequeDataSetData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="discotequeDataSetData.xss">
+      <DependentUpon>discotequeDataSetData.xsd</DependentUpon>
+    </None>
+    <None Include="discotequeModel.edmx.diagram">
+      <DependentUpon>discotequeModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,6 +351,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\UsuarioService\configuration91.svcinfo" />
+    <None Include="Connected Services\UsuarioService\configuration.svcinfo" />
+    <None Include="Connected Services\UsuarioService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ProductoSevice\configuration91.svcinfo" />
+    <None Include="Connected Services\ProductoSevice\configuration.svcinfo" />
+    <None Include="Connected Services\ProductoSevice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="discotequeModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>discotequeModel.Context.cs</LastGenOutput>
+      <DependentUpon>discotequeModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="discotequeModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>discotequeModel.edmx</DependentUpon>
+      <LastGenOutput>discotequeModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -123,5 +397,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ProductoSevice\" />
+    <WCFMetadataStorage Include="Connected Services\UsuarioService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

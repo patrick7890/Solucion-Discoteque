@@ -22,5 +22,27 @@ namespace discoteque
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login Form1 = new Login();
+            Form1.Show();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            ListadoProductos Form1 = new ListadoProductos();
+            Form1.Show();
+        }
+
+        private void btnBodega_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListaBodega Form1 = new ListaBodega();
+            Form1.Show();
+        }
     }
 }
