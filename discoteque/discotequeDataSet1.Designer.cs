@@ -4786,11 +4786,46 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT producto_idproducto, comanda_idcomanda FROM discoteque.comanda_producto";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        c.producto_idproducto, c.comanda_idcomanda, P.nombreProducto, COUNT(P.nombreProducto) AS cantidad, a.fecha
+FROM            discoteque.comanda_producto AS c INNER JOIN
+                         discoteque.producto AS P ON c.producto_idproducto = P.idproducto INNER JOIN
+                         discoteque.comanda AS co ON co.idcomanda = c.comanda_idcomanda INNER JOIN
+                         discoteque.atencion AS a ON co.atencion_idatencion = a.idatencion
+WHERE        (a.fecha BETWEEN @fechaini AND @fechafin)
+GROUP BY P.nombreProducto, c.producto_idproducto, c.comanda_idcomanda, a.fecha
+ORDER BY a.fecha DESC, 'cantidad' DESC";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaini", global::System.Data.SqlDbType.DateTime2, 6, global::System.Data.ParameterDirection.Input, 0, 0, "fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechafin", global::System.Data.SqlDbType.DateTime2, 6, global::System.Data.ParameterDirection.Input, 0, 0, "fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        c.producto_idproducto, c.comanda_idcomanda, P.nombreProducto, COUNT(P.nombreProducto) AS cantidad
+FROM            discoteque.comanda_producto AS c INNER JOIN
+                         discoteque.producto AS P ON c.producto_idproducto = P.idproducto
+GROUP BY P.nombreProducto, c.producto_idproducto, c.comanda_idcomanda
+ORDER BY 'cantidad' DESC";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT c.producto_idproducto
+      ,c.comanda_idcomanda
+	  ,p.nombreProducto
+	  ,COUNT(p.nombreProducto) cantidad
+	  ,a.fecha
+  FROM discoteque.comanda_producto c
+  JOIN discoteque.producto P ON	c.producto_idproducto=p.idproducto
+  JOIN [discoteque].[comanda] co ON co.idcomanda=c.comanda_idcomanda
+  JOIN [discoteque].[atencion] a ON co.atencion_idatencion=a.idatencion
+  GROUP BY p.nombreProducto,c.producto_idproducto,c.comanda_idcomanda,a.fecha
+  ORDER BY A.fecha DESC,'cantidad' DESC";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4812,6 +4847,102 @@ SELECT idcomanda, totalcomanda, atencion_idatencion, atencion_usuario_idusuario 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual discotequeDataSet.comanda_productoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            discotequeDataSet.comanda_productoDataTable dataTable = new discotequeDataSet.comanda_productoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FiltroMAsVendidoNoche(discotequeDataSet.comanda_productoDataTable dataTable, string fechaini, string fechafin) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((fechaini == null)) {
+                throw new global::System.ArgumentNullException("fechaini");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(fechaini));
+            }
+            if ((fechafin == null)) {
+                throw new global::System.ArgumentNullException("fechafin");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(fechafin));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual discotequeDataSet.comanda_productoDataTable TablaFiltroMAsVendidoNoche(string fechaini, string fechafin) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((fechaini == null)) {
+                throw new global::System.ArgumentNullException("fechaini");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(fechaini));
+            }
+            if ((fechafin == null)) {
+                throw new global::System.ArgumentNullException("fechafin");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(fechafin));
+            }
+            discotequeDataSet.comanda_productoDataTable dataTable = new discotequeDataSet.comanda_productoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int MasVendido(discotequeDataSet.comanda_productoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual discotequeDataSet.comanda_productoDataTable TablaMasVendido() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            discotequeDataSet.comanda_productoDataTable dataTable = new discotequeDataSet.comanda_productoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int MasVendidoNoche(discotequeDataSet.comanda_productoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual discotequeDataSet.comanda_productoDataTable TablaMasVendidoNoche() {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             discotequeDataSet.comanda_productoDataTable dataTable = new discotequeDataSet.comanda_productoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
