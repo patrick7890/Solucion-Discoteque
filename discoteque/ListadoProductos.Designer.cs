@@ -38,6 +38,7 @@
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionTipoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
@@ -52,11 +53,13 @@
             this.nombreProductoDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn,
             this.stockDataGridViewTextBoxColumn,
-            this.enVentaDataGridViewTextBoxColumn});
+            this.enVentaDataGridViewTextBoxColumn,
+            this.descripcionTipoPDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 103);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 60);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(804, 463);
             this.dataGridView1.TabIndex = 0;
             // 
             // discotequeDataSet
@@ -76,26 +79,26 @@
             // idproductoDataGridViewTextBoxColumn
             // 
             this.idproductoDataGridViewTextBoxColumn.DataPropertyName = "idproducto";
-            this.idproductoDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idproductoDataGridViewTextBoxColumn.HeaderText = "idproducto";
             this.idproductoDataGridViewTextBoxColumn.Name = "idproductoDataGridViewTextBoxColumn";
             this.idproductoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreProductoDataGridViewTextBoxColumn
             // 
             this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "nombreProducto";
-            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "nombreProducto";
             this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
             // 
             // precioDataGridViewTextBoxColumn
             // 
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
             // stockDataGridViewTextBoxColumn
             // 
             this.stockDataGridViewTextBoxColumn.DataPropertyName = "stock";
-            this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
+            this.stockDataGridViewTextBoxColumn.HeaderText = "stock";
             this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
             // 
             // enVentaDataGridViewTextBoxColumn
@@ -103,6 +106,12 @@
             this.enVentaDataGridViewTextBoxColumn.DataPropertyName = "enVenta";
             this.enVentaDataGridViewTextBoxColumn.HeaderText = "enVenta";
             this.enVentaDataGridViewTextBoxColumn.Name = "enVentaDataGridViewTextBoxColumn";
+            // 
+            // descripcionTipoPDataGridViewTextBoxColumn
+            // 
+            this.descripcionTipoPDataGridViewTextBoxColumn.DataPropertyName = "descripcionTipoP";
+            this.descripcionTipoPDataGridViewTextBoxColumn.HeaderText = "descripcionTipoP";
+            this.descripcionTipoPDataGridViewTextBoxColumn.Name = "descripcionTipoPDataGridViewTextBoxColumn";
             // 
             // ListadoProductos
             // 
@@ -129,5 +138,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionTipoPDataGridViewTextBoxColumn;
     }
 }

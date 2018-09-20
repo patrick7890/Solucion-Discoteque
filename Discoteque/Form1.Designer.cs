@@ -28,10 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.btnBodega = new MetroFramework.Controls.MetroButton();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
+            this.tipoproductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoproductoTableAdapter = new discoteque.discotequeDataSetTableAdapters.tipoproductoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -66,11 +77,41 @@
             // 
             // reportViewer2
             // 
+            reportDataSource1.Name = "Prodcuto";
+            reportDataSource1.Value = this.productoBindingSource;
+            reportDataSource2.Name = "TiposP";
+            reportDataSource2.Value = this.tipoproductoBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.reporteBodega.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(23, 90);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
             this.reportViewer2.Size = new System.Drawing.Size(488, 309);
             this.reportViewer2.TabIndex = 5;
+            // 
+            // discotequeDataSet
+            // 
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "producto";
+            this.productoBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipoproductoBindingSource
+            // 
+            this.tipoproductoBindingSource.DataMember = "tipoproducto";
+            this.tipoproductoBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // tipoproductoTableAdapter
+            // 
+            this.tipoproductoTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -84,6 +125,9 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -93,6 +137,11 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton btnBodega;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private discotequeDataSet discotequeDataSet;
+        private System.Windows.Forms.BindingSource tipoproductoBindingSource;
+        private discotequeDataSetTableAdapters.productoTableAdapter productoTableAdapter;
+        private discotequeDataSetTableAdapters.tipoproductoTableAdapter tipoproductoTableAdapter;
     }
 }
 

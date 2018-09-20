@@ -20,7 +20,11 @@ namespace discoteque
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
-           
+            this.productoTableAdapter.Fill(this.discotequeDataSet.producto);
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.tipoproducto' Puede moverla o quitarla según sea necesario.
+            this.tipoproductoTableAdapter.Fill(this.discotequeDataSet.tipoproducto);
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

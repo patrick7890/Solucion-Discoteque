@@ -4,6 +4,9 @@
 
     partial class discotequeDataSet
     {
+        partial class productoDataTable
+        {
+        }
     }
 }
 

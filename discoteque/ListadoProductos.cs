@@ -18,11 +18,6 @@ namespace discoteque
             InitializeComponent();
         }
 
-        private void ListadoProductos_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
             try
@@ -40,6 +35,35 @@ namespace discoteque
         {
             // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.Fill(this.discotequeDataSet.producto);
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.discotequeDataSet.producto);
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.productosTipo(this.discotequeDataSet.producto);
+        }
+
+        private void productosTipoToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productoTableAdapter.productosTipo(this.discotequeDataSet.producto);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void productosTipoToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productoTableAdapter.productosTipo(this.discotequeDataSet.producto);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }
