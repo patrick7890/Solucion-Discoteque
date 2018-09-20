@@ -115,7 +115,7 @@
   </xs:complexType>
   <xs:complexType name="listarResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="IngresarProducto">
