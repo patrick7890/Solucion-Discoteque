@@ -162,6 +162,12 @@
     <Compile Include="ListaComanda.Designer.cs">
       <DependentUpon>ListaComanda.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaComanda2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaComanda2.Designer.cs">
+      <DependentUpon>ListaComanda2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     <EmbeddedResource Include="ListaComanda.resx">
       <DependentUpon>ListaComanda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaComanda2.resx">
+      <DependentUpon>ListaComanda2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListadoProductos.resx">
       <DependentUpon>ListadoProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +239,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\reporteBodega.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteComanda.rdlc" />
     <None Include="App.Config" />
     <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.ActualizarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
