@@ -16,5 +16,13 @@ namespace discoteque
         {
             InitializeComponent();
         }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Formularios.AgregarProducto form = new Formularios.AgregarProducto();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

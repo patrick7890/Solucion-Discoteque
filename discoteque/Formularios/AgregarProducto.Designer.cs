@@ -37,14 +37,14 @@
             this.txtPrecio = new MetroFramework.Controls.MetroTextBox();
             this.txtStock = new MetroFramework.Controls.MetroTextBox();
             this.cboTipoProducto = new MetroFramework.Controls.MetroComboBox();
-            this.btnProducto = new MetroFramework.Controls.MetroButton();
-            this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.tipoproductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
+            this.btnProducto = new MetroFramework.Controls.MetroButton();
             this.tipoproductoTableAdapter = new discoteque.discotequeDataSetTableAdapters.tipoproductoTableAdapter();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,6 +187,16 @@
             this.cboTipoProducto.UseSelectable = true;
             this.cboTipoProducto.ValueMember = "idtipoProducto";
             // 
+            // tipoproductoBindingSource
+            // 
+            this.tipoproductoBindingSource.DataMember = "tipoproducto";
+            this.tipoproductoBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // discotequeDataSet
+            // 
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnProducto
             // 
             this.btnProducto.Location = new System.Drawing.Point(152, 353);
@@ -196,16 +206,6 @@
             this.btnProducto.Text = "Registrar Producto";
             this.btnProducto.UseSelectable = true;
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
-            // 
-            // discotequeDataSet
-            // 
-            this.discotequeDataSet.DataSetName = "discotequeDataSet";
-            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipoproductoBindingSource
-            // 
-            this.tipoproductoBindingSource.DataMember = "tipoproducto";
-            this.tipoproductoBindingSource.DataSource = this.discotequeDataSet;
             // 
             // tipoproductoTableAdapter
             // 
@@ -234,13 +234,13 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
-            this.IsMdiContainer = true;
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
             this.TransparencyKey = System.Drawing.Color.Empty;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AgregarProducto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
