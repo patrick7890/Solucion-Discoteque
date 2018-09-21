@@ -263,7 +263,10 @@
     <None Include="Connected Services\ProductoSevice\ProductoWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UsuarioService\discoteque.UsuarioService.LoginResponse.datasource">
+    <None Include="Connected Services\UsuarioService\discoteque.UsuarioService.idUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioService\discoteque.UsuarioService.tipoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioService\UsuarioWS.wsdl" />
