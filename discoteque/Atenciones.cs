@@ -16,5 +16,15 @@ namespace discoteque
         {
             InitializeComponent();
         }
+
+        private void btnCrearAtencion_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Formularios.CrearAtencion Form1 = new Formularios.CrearAtencion();
+            Form1.Show();
+
+
+        }
     }
 }

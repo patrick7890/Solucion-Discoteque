@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
@@ -39,6 +39,7 @@
             this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             this.SuspendLayout();
@@ -85,9 +86,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "Atencion";
-            reportDataSource2.Value = this.atencionBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "Atencion";
+            reportDataSource1.Value = this.atencionBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.atenciones.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(37, 81);
             this.reportViewer1.Name = "reportViewer1";
@@ -119,11 +120,22 @@
             this.metroLink1.UseSelectable = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(623, 375);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Mesero";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.reportViewer1);
@@ -149,6 +161,7 @@
         private discotequeDataSetTableAdapters.atencionTableAdapter atencionTableAdapter;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroLink metroLink1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

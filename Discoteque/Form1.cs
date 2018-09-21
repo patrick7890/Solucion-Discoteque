@@ -59,5 +59,14 @@ namespace discoteque
         {
            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Atenciones Form1 = new Atenciones();
+            Form1.Show();
+
+
+        }
     }
 }

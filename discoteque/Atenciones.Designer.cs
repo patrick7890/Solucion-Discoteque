@@ -28,29 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.panel1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnCrearAtencion = new MetroFramework.Controls.MetroButton();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.btnModificar = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = null;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = null;
-            this.panel1.LocalReport.DataSources.Add(reportDataSource1);
-            this.panel1.LocalReport.DataSources.Add(reportDataSource2);
-            this.panel1.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.ProductosDadosBaja.rdlc";
-            this.panel1.Location = new System.Drawing.Point(0, 77);
-            this.panel1.Name = "panel1";
-            this.panel1.ServerReport.BearerToken = null;
-            this.panel1.Size = new System.Drawing.Size(634, 332);
-            this.panel1.TabIndex = 6;
             // 
             // btnCrearAtencion
             // 
@@ -60,6 +42,7 @@
             this.btnCrearAtencion.TabIndex = 7;
             this.btnCrearAtencion.Text = "Crear Atencion";
             this.btnCrearAtencion.UseSelectable = true;
+            this.btnCrearAtencion.Click += new System.EventHandler(this.btnCrearAtencion_Click);
             // 
             // btnSalir
             // 
@@ -97,7 +80,6 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCrearAtencion);
-            this.Controls.Add(this.panel1);
             this.Name = "Atenciones";
             this.Text = "Atenciones";
             this.ResumeLayout(false);
@@ -105,8 +87,6 @@
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer panel1;
         private MetroFramework.Controls.MetroButton btnCrearAtencion;
         private MetroFramework.Controls.MetroButton btnSalir;
         private MetroFramework.Controls.MetroButton btnModificar;
