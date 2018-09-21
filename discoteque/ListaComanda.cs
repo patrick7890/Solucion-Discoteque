@@ -39,5 +39,14 @@ namespace discoteque
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void btnMasVendido_Click(object sender, EventArgs e)
+        {
+
+
+
+            MessageBox.Show("Usuario incorrecto");
+
+        }
     }
 }

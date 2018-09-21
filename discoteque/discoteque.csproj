@@ -198,6 +198,12 @@
     <Compile Include="usuario.cs">
       <DependentUpon>discotequeModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="VistaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaAdmin.Designer.cs">
+      <DependentUpon>VistaAdmin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Atenciones.resx">
       <DependentUpon>Atenciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\reporteBodega.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteComanda.rdlc" />
+    <EmbeddedResource Include="VistaAdmin.resx">
+      <DependentUpon>VistaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="Connected Services\ProductoSevice\discoteque.ProductoSevice.ActualizarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

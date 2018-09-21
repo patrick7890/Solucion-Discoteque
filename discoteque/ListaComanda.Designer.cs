@@ -269,6 +269,7 @@
             this.btnMasVendido.TabIndex = 0;
             this.btnMasVendido.Text = "Listar";
             this.btnMasVendido.UseSelectable = true;
+            this.btnMasVendido.Click += new System.EventHandler(this.btnMasVendido_Click);
             // 
             // atencionBindingSource
             // 

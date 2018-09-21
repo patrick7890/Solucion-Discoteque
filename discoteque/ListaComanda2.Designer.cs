@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -48,16 +50,24 @@
             this.txtNombre = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.btnListarMesero = new MetroFramework.Controls.MetroButton();
-            this.discotequeDataSet = new discoteque.discotequeDataSet();
-            this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // atencionBindingSource
+            // 
+            this.atencionBindingSource.DataMember = "atencion";
+            this.atencionBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // discotequeDataSet
+            // 
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox4
             // 
@@ -98,6 +108,7 @@
             this.btnMenosVendido.TabIndex = 1;
             this.btnMenosVendido.Text = "Listar";
             this.btnMenosVendido.UseSelectable = true;
+            this.btnMenosVendido.Click += new System.EventHandler(this.btnMenosVendido_Click);
             // 
             // btnMasVendido
             // 
@@ -107,6 +118,7 @@
             this.btnMasVendido.TabIndex = 0;
             this.btnMasVendido.Text = "Listar";
             this.btnMasVendido.UseSelectable = true;
+            this.btnMasVendido.Click += new System.EventHandler(this.btnMasVendido_Click);
             // 
             // groupBox3
             // 
@@ -168,9 +180,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.atencionBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.atencionBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "discoteque.Reportes.ReporteComanda.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(23, 72);
             this.reportViewer1.Name = "reportViewer1";
@@ -259,16 +271,6 @@
             this.btnListarMesero.UseSelectable = true;
             this.btnListarMesero.Click += new System.EventHandler(this.btnListarMesero_Click);
             // 
-            // discotequeDataSet
-            // 
-            this.discotequeDataSet.DataSetName = "discotequeDataSet";
-            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // atencionBindingSource
-            // 
-            this.atencionBindingSource.DataMember = "atencion";
-            this.atencionBindingSource.DataSource = this.discotequeDataSet;
-            // 
             // atencionTableAdapter
             // 
             this.atencionTableAdapter.ClearBeforeFill = true;
@@ -286,6 +288,8 @@
             this.Name = "ListaComanda2";
             this.Text = "ListaComanda";
             this.Load += new System.EventHandler(this.ListaComanda2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -293,8 +297,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

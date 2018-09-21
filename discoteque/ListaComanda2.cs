@@ -42,5 +42,15 @@ namespace discoteque
             this.atencionTableAdapter.FiltroFecha(this.discotequeDataSet.atencion, dateInicio.Text,dateTermino.Text);
             this.reportViewer1.RefreshReport();
         }
+
+        private void btnMasVendido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMenosVendido_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace discoteque
             }
             else if(logeado == 2){
                 this.Hide();
-                ListaBodega Form2 = new ListaBodega();
+                VistaAdmin Form2 = new VistaAdmin();
                 Form2.Show();
 
             }else
