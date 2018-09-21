@@ -12,6 +12,9 @@ namespace discoteque
 {
     public partial class Atenciones : MetroFramework.Forms.MetroForm
     {
+       public int ida;
+
+
         public Atenciones()
         {
             InitializeComponent();
@@ -20,8 +23,14 @@ namespace discoteque
         private void btnCrearAtencion_Click(object sender, EventArgs e)
         {
 
+
+
+
             this.Hide();
             Formularios.CrearAtencion Form1 = new Formularios.CrearAtencion();
+
+            Form1.idUsu = ida;
+
             Form1.Show();
 
 

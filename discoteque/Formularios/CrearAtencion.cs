@@ -13,7 +13,7 @@ namespace discoteque.Formularios
     public partial class CrearAtencion : MetroFramework.Forms.MetroForm
     {
 
-        public int idUsu = 0;
+        public int idUsu;
 
         public CrearAtencion()
         {
@@ -23,8 +23,8 @@ namespace discoteque.Formularios
         private void btnCrear_Click(object sender, EventArgs e)
         {
 
-            int id = 1;
-            int tipo = cboTipoSala.SelectedIndex;
+            int id = idUsu;
+            int tipo = cboTipoSala.SelectedIndex +1;
             DateTime fecha = DateTime.Now;
 
             this.atencionTableAdapter.InsertAtencion(fecha.ToString(),id,tipo);

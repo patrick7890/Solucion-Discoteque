@@ -16,26 +16,33 @@ namespace discoteque.UsuarioService {
     public interface UsuarioWS {
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento user del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/UsuarioWS/LoginRequest", ReplyAction="http://webservice/UsuarioWS/LoginResponse")]
-        discoteque.UsuarioService.LoginResponse Login(discoteque.UsuarioService.LoginRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/UsuarioWS/idUsuarioRequest", ReplyAction="http://webservice/UsuarioWS/idUsuarioResponse")]
+        discoteque.UsuarioService.idUsuarioResponse idUsuario(discoteque.UsuarioService.idUsuarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/UsuarioWS/LoginRequest", ReplyAction="http://webservice/UsuarioWS/LoginResponse")]
-        System.Threading.Tasks.Task<discoteque.UsuarioService.LoginResponse> LoginAsync(discoteque.UsuarioService.LoginRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/UsuarioWS/idUsuarioRequest", ReplyAction="http://webservice/UsuarioWS/idUsuarioResponse")]
+        System.Threading.Tasks.Task<discoteque.UsuarioService.idUsuarioResponse> idUsuarioAsync(discoteque.UsuarioService.idUsuarioRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento user del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/UsuarioWS/tipoUsuarioRequest", ReplyAction="http://webservice/UsuarioWS/tipoUsuarioResponse")]
+        discoteque.UsuarioService.tipoUsuarioResponse tipoUsuario(discoteque.UsuarioService.tipoUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice/UsuarioWS/tipoUsuarioRequest", ReplyAction="http://webservice/UsuarioWS/tipoUsuarioResponse")]
+        System.Threading.Tasks.Task<discoteque.UsuarioService.tipoUsuarioResponse> tipoUsuarioAsync(discoteque.UsuarioService.tipoUsuarioRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LoginRequest {
+    public partial class idUsuarioRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Login", Namespace="http://webservice/", Order=0)]
-        public discoteque.UsuarioService.LoginRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="idUsuario", Namespace="http://webservice/", Order=0)]
+        public discoteque.UsuarioService.idUsuarioRequestBody Body;
         
-        public LoginRequest() {
+        public idUsuarioRequest() {
         }
         
-        public LoginRequest(discoteque.UsuarioService.LoginRequestBody Body) {
+        public idUsuarioRequest(discoteque.UsuarioService.idUsuarioRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -44,7 +51,7 @@ namespace discoteque.UsuarioService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class LoginRequestBody {
+    public partial class idUsuarioRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string user;
@@ -52,10 +59,10 @@ namespace discoteque.UsuarioService {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
         public string password;
         
-        public LoginRequestBody() {
+        public idUsuarioRequestBody() {
         }
         
-        public LoginRequestBody(string user, string password) {
+        public idUsuarioRequestBody(string user, string password) {
             this.user = user;
             this.password = password;
         }
@@ -65,15 +72,15 @@ namespace discoteque.UsuarioService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LoginResponse {
+    public partial class idUsuarioResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LoginResponse", Namespace="http://webservice/", Order=0)]
-        public discoteque.UsuarioService.LoginResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="idUsuarioResponse", Namespace="http://webservice/", Order=0)]
+        public discoteque.UsuarioService.idUsuarioResponseBody Body;
         
-        public LoginResponse() {
+        public idUsuarioResponse() {
         }
         
-        public LoginResponse(discoteque.UsuarioService.LoginResponseBody Body) {
+        public idUsuarioResponse(discoteque.UsuarioService.idUsuarioResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -82,15 +89,87 @@ namespace discoteque.UsuarioService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class LoginResponseBody {
+    public partial class idUsuarioResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool @return;
+        public int @return;
         
-        public LoginResponseBody() {
+        public idUsuarioResponseBody() {
         }
         
-        public LoginResponseBody(bool @return) {
+        public idUsuarioResponseBody(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class tipoUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="tipoUsuario", Namespace="http://webservice/", Order=0)]
+        public discoteque.UsuarioService.tipoUsuarioRequestBody Body;
+        
+        public tipoUsuarioRequest() {
+        }
+        
+        public tipoUsuarioRequest(discoteque.UsuarioService.tipoUsuarioRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class tipoUsuarioRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string user;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string password;
+        
+        public tipoUsuarioRequestBody() {
+        }
+        
+        public tipoUsuarioRequestBody(string user, string password) {
+            this.user = user;
+            this.password = password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class tipoUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="tipoUsuarioResponse", Namespace="http://webservice/", Order=0)]
+        public discoteque.UsuarioService.tipoUsuarioResponseBody Body;
+        
+        public tipoUsuarioResponse() {
+        }
+        
+        public tipoUsuarioResponse(discoteque.UsuarioService.tipoUsuarioResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class tipoUsuarioResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int @return;
+        
+        public tipoUsuarioResponseBody() {
+        }
+        
+        public tipoUsuarioResponseBody(int @return) {
             this.@return = @return;
         }
     }
@@ -123,30 +202,57 @@ namespace discoteque.UsuarioService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        discoteque.UsuarioService.LoginResponse discoteque.UsuarioService.UsuarioWS.Login(discoteque.UsuarioService.LoginRequest request) {
-            return base.Channel.Login(request);
+        discoteque.UsuarioService.idUsuarioResponse discoteque.UsuarioService.UsuarioWS.idUsuario(discoteque.UsuarioService.idUsuarioRequest request) {
+            return base.Channel.idUsuario(request);
         }
         
-        public bool Login(string user, string password) {
-            discoteque.UsuarioService.LoginRequest inValue = new discoteque.UsuarioService.LoginRequest();
-            inValue.Body = new discoteque.UsuarioService.LoginRequestBody();
+        public int idUsuario(string user, string password) {
+            discoteque.UsuarioService.idUsuarioRequest inValue = new discoteque.UsuarioService.idUsuarioRequest();
+            inValue.Body = new discoteque.UsuarioService.idUsuarioRequestBody();
             inValue.Body.user = user;
             inValue.Body.password = password;
-            discoteque.UsuarioService.LoginResponse retVal = ((discoteque.UsuarioService.UsuarioWS)(this)).Login(inValue);
+            discoteque.UsuarioService.idUsuarioResponse retVal = ((discoteque.UsuarioService.UsuarioWS)(this)).idUsuario(inValue);
             return retVal.Body.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<discoteque.UsuarioService.LoginResponse> discoteque.UsuarioService.UsuarioWS.LoginAsync(discoteque.UsuarioService.LoginRequest request) {
-            return base.Channel.LoginAsync(request);
+        System.Threading.Tasks.Task<discoteque.UsuarioService.idUsuarioResponse> discoteque.UsuarioService.UsuarioWS.idUsuarioAsync(discoteque.UsuarioService.idUsuarioRequest request) {
+            return base.Channel.idUsuarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<discoteque.UsuarioService.LoginResponse> LoginAsync(string user, string password) {
-            discoteque.UsuarioService.LoginRequest inValue = new discoteque.UsuarioService.LoginRequest();
-            inValue.Body = new discoteque.UsuarioService.LoginRequestBody();
+        public System.Threading.Tasks.Task<discoteque.UsuarioService.idUsuarioResponse> idUsuarioAsync(string user, string password) {
+            discoteque.UsuarioService.idUsuarioRequest inValue = new discoteque.UsuarioService.idUsuarioRequest();
+            inValue.Body = new discoteque.UsuarioService.idUsuarioRequestBody();
             inValue.Body.user = user;
             inValue.Body.password = password;
-            return ((discoteque.UsuarioService.UsuarioWS)(this)).LoginAsync(inValue);
+            return ((discoteque.UsuarioService.UsuarioWS)(this)).idUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        discoteque.UsuarioService.tipoUsuarioResponse discoteque.UsuarioService.UsuarioWS.tipoUsuario(discoteque.UsuarioService.tipoUsuarioRequest request) {
+            return base.Channel.tipoUsuario(request);
+        }
+        
+        public int tipoUsuario(string user, string password) {
+            discoteque.UsuarioService.tipoUsuarioRequest inValue = new discoteque.UsuarioService.tipoUsuarioRequest();
+            inValue.Body = new discoteque.UsuarioService.tipoUsuarioRequestBody();
+            inValue.Body.user = user;
+            inValue.Body.password = password;
+            discoteque.UsuarioService.tipoUsuarioResponse retVal = ((discoteque.UsuarioService.UsuarioWS)(this)).tipoUsuario(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<discoteque.UsuarioService.tipoUsuarioResponse> discoteque.UsuarioService.UsuarioWS.tipoUsuarioAsync(discoteque.UsuarioService.tipoUsuarioRequest request) {
+            return base.Channel.tipoUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<discoteque.UsuarioService.tipoUsuarioResponse> tipoUsuarioAsync(string user, string password) {
+            discoteque.UsuarioService.tipoUsuarioRequest inValue = new discoteque.UsuarioService.tipoUsuarioRequest();
+            inValue.Body = new discoteque.UsuarioService.tipoUsuarioRequestBody();
+            inValue.Body.user = user;
+            inValue.Body.password = password;
+            return ((discoteque.UsuarioService.UsuarioWS)(this)).tipoUsuarioAsync(inValue);
         }
     }
 }

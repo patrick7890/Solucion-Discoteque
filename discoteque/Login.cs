@@ -26,16 +26,24 @@ namespace discoteque
         {
             UsuarioService.UsuarioWSClient login = new UsuarioService.UsuarioWSClient();
 
-            Boolean logeado = login.Login(txtUsu.Text,txtPass.Text);
+            int logeado = login.tipoUsuario(txtUsu.Text,txtPass.Text);
 
-            if (logeado)
+            int id = login.idUsuario(txtUsu.Text, txtPass.Text);
+
+            if (logeado == 1 )
             {
                 this.Hide();
-                Form1 Form1 = new Form1();
+                Atenciones Form1 = new Atenciones();
+                Form1.ida = id;
                 Form1.Show();
 
             }
-            else
+            else if(logeado == 2){
+                this.Hide();
+                ListaBodega Form2 = new ListaBodega();
+                Form2.Show();
+
+            }else
             {
                 MessageBox.Show("Usuario incorrecto");
             }
