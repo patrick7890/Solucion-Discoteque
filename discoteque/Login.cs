@@ -25,6 +25,10 @@ namespace discoteque
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             UsuarioService.UsuarioWSClient login = new UsuarioService.UsuarioWSClient();
+            try
+            {
+
+            
 
             int logeado = login.tipoUsuario(txtUsu.Text,txtPass.Text);
 
@@ -48,6 +52,18 @@ namespace discoteque
                 MessageBox.Show("Usuario incorrecto");
             }
 
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Usuario incorrecto");
+            }
+
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
         }
     }
 }

@@ -28,9 +28,9 @@ namespace discoteque.Formularios
             DateTime fecha = DateTime.Now;
 
             this.atencionTableAdapter.InsertAtencion(fecha.ToString(),id,tipo);
-
             this.Hide();
             Atenciones Form1 = new Atenciones();
+            Form1.idat = id;
             Form1.Show();
 
         }

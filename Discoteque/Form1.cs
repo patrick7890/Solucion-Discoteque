@@ -19,54 +19,19 @@ namespace discoteque
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.atencion' Puede moverla o quitarla según sea necesario.
-            this.atencionTableAdapter.Fill(this.discotequeDataSet.atencion);
-            reportViewer1.RefreshReport();
+            timer1.Enabled = true;
+            timer1.Interval = 5000;
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+       
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
             this.Hide();
             Login Form1 = new Login();
             Form1.Show();
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-            ListadoProductos Form1 = new ListadoProductos();
-            Form1.Show();
-        }
-
-        private void btnBodega_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ListaBodega Form1 = new ListaBodega();
-            Form1.Show();
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-            ListaComanda2 Form1 = new ListaComanda2();
-            Form1.Show();
-
-        }
-
-        private void metroLink1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Atenciones Form1 = new Atenciones();
-            Form1.Show();
-
-
+            timer1.Enabled = false;
+            
         }
     }
 }
