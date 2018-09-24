@@ -29,8 +29,10 @@ namespace discoteque.Formularios
 
             this.atencionTableAdapter.InsertAtencion(fecha.ToString(),id,tipo);
             this.Hide();
+            int idAtencion = (int)atencionTableAdapter.lastId();
             Atenciones Form1 = new Atenciones();
-            Form1.idat = id;
+            Form1.ida = id;
+            Form1.idat = idAtencion;
             Form1.Show();
 
         }

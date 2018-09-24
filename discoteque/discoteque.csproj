@@ -150,6 +150,12 @@
     <Compile Include="Formularios\CrearAtencion.Designer.cs">
       <DependentUpon>CrearAtencion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\CrearComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CrearComanda.Designer.cs">
+      <DependentUpon>CrearComanda.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaBodega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearAtencion.resx">
       <DependentUpon>CrearAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CrearComanda.resx">
+      <DependentUpon>CrearComanda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaBodega.resx">
       <DependentUpon>ListaBodega.cs</DependentUpon>

@@ -67,7 +67,7 @@ namespace discoteque
             this.comandaTableAdapter.InsertComanda(idat, ida);
             int com = (int)comandaTableAdapter.lastComanda();
             Formularios.CrearComanda comanda = new Formularios.CrearComanda();
-            comanda.MdiParent=this;
+            comanda.idcomanda = com;
             comanda.Show();
 
 

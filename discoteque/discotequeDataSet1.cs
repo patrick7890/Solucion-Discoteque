@@ -10,9 +10,12 @@
     }
 }
 
-namespace discoteque.discotequeDataSetTableAdapters {
-    
-    
+namespace discoteque.discotequeDataSetTableAdapters
+{
+    partial class comandaTableAdapter
+    {
+    }
+
     public partial class productoTableAdapter {
     }
 }

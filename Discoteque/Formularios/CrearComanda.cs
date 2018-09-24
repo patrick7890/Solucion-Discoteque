@@ -40,7 +40,7 @@ namespace discoteque.Formularios
         private void cboTipoProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            int idTipo = cboTipoProducto.SelectedIndex;
+            int idTipo = cboTipoProducto.SelectedIndex +1;
 
 
             this.productoTableAdapter.enVenta(this.discotequeDataSet.producto,idTipo);
