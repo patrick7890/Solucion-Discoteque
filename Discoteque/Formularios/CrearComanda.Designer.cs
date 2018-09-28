@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cboTipoProducto = new MetroFramework.Controls.MetroComboBox();
+            this.tipoproductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.lblID = new MetroFramework.Controls.MetroLabel();
             this.txtID = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -42,17 +44,14 @@
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
-            this.tipoproductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoproductoTableAdapter = new discoteque.discotequeDataSetTableAdapters.tipoproductoTableAdapter();
             this.comandaproductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comanda_productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.comanda_productoTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comandaproductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +77,16 @@
             this.cboTipoProducto.UseSelectable = true;
             this.cboTipoProducto.ValueMember = "idtipoProducto";
             this.cboTipoProducto.SelectedIndexChanged += new System.EventHandler(this.cboTipoProducto_SelectedIndexChanged);
+            // 
+            // tipoproductoBindingSource
+            // 
+            this.tipoproductoBindingSource.DataMember = "tipoproducto";
+            this.tipoproductoBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // discotequeDataSet
+            // 
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblID
             // 
@@ -218,19 +227,9 @@
             this.productoBindingSource.DataMember = "producto";
             this.productoBindingSource.DataSource = this.discotequeDataSet;
             // 
-            // discotequeDataSet
-            // 
-            this.discotequeDataSet.DataSetName = "discotequeDataSet";
-            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // productoTableAdapter
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tipoproductoBindingSource
-            // 
-            this.tipoproductoBindingSource.DataMember = "tipoproducto";
-            this.tipoproductoBindingSource.DataSource = this.discotequeDataSet;
             // 
             // tipoproductoTableAdapter
             // 
@@ -245,20 +244,11 @@
             // 
             this.comanda_productoTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(292, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 9;
-            // 
             // CrearComanda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 538);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtCantidad);
@@ -270,10 +260,10 @@
             this.Name = "CrearComanda";
             this.Text = "CrearComanda";
             this.Load += new System.EventHandler(this.CrearComanda_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoproductoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comandaproductoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,6 +291,5 @@
         private discotequeDataSetTableAdapters.tipoproductoTableAdapter tipoproductoTableAdapter;
         private System.Windows.Forms.BindingSource comandaproductoBindingSource;
         private discotequeDataSetTableAdapters.comanda_productoTableAdapter comanda_productoTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

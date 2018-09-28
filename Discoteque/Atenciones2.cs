@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace discoteque
 {
-    public partial class Atenciones : MetroFramework.Forms.MetroForm
+    public partial class Atenciones2 : MetroFramework.Forms.MetroForm
     {
 
         public int ida;
         public int idat;
 
-        public Atenciones()
+
+        public Atenciones2()
         {
             InitializeComponent();
+
         }
 
         private void btnCrearAtencion_Click(object sender, EventArgs e)
@@ -43,8 +45,8 @@ namespace discoteque
             Formularios.CrearAtencion Form1 = new Formularios.CrearAtencion();
 
             Form1.idUsu = ida;
+
             Form1.Show();
-          
 
 
 
@@ -52,8 +54,8 @@ namespace discoteque
 
         private void Atenciones_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Login l = new Login();
-            l.Show();
+            //Login l = new Login();
+            //l.Show();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -75,14 +77,26 @@ namespace discoteque
 
         private void Atenciones_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.atencion' Puede moverla o quitarla según sea necesario.
+            //this.atencionTableAdapter.GetProductosByAtencion(this.discotequeDataSet.atencion, idat);
+            lblA.Text = idat.ToString();
             // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.comanda' Puede moverla o quitarla según sea necesario.
             this.comandaTableAdapter.Fill(this.discotequeDataSet.comanda);
+            timer1.Interval = 5000;
 
         }
 
-        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void finalizarAtencionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            atencionTableAdapter.Updatefactura(0, idat);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            atencionTableAdapter.GetProductosByAtencion(discotequeDataSet.atencion,idat);
+
+            lblTotal.Text= atencionTableAdapter.TotalAPagar(idat).ToString();
         }
     }
 }

@@ -44,19 +44,59 @@ namespace discoteque.Formularios
 
 
             this.productoTableAdapter.enVenta(this.discotequeDataSet.producto,idTipo);
+            
 
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            int agregado = 0;
+            int cont = 0;
             int cant = int.Parse(txtCantidad.Text);
             int id = int.Parse(txtID.Text);
-            for (int i = 0; i < cant; i++)
+            try
             {
-                this.comanda_productoTableAdapter.InsertComanda_Producto(id, idcomanda);
-            }
-            
+                if (this.productoTableAdapter.GetStock(id)>cant)
+                {
+                    for (int i = 0; i < cant; i++)
+                    {
+                        agregado = this.comanda_productoTableAdapter.InsertComanda_Producto(id, idcomanda);
 
+                        if (agregado != 0)
+                        {
+                            cont++;
+                        }
+
+                    }
+                    MessageBox.Show(cont + " Productos Agregados");
+                } 
+                
+                
+                else
+                {
+               
+                    MessageBox.Show(cant - cont + " No hay stock Suficiente");
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show( "El Producto no Existe");
+            }
+
+
+            limpiar();
+
+        }
+
+
+        public void limpiar()
+        {
+            txtCantidad.Text = "";
+            txtID.Text = "";
+            int idTipo = cboTipoProducto.SelectedIndex + 1;
+            this.productoTableAdapter.enVenta(this.discotequeDataSet.producto, idTipo);
+            dataGridView1.Refresh();
 
         }
     }
