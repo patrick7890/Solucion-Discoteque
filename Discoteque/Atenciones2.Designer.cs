@@ -36,24 +36,25 @@
             this.agregarComandaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalizarAtencionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblN = new System.Windows.Forms.Label();
-            this.discotequeDataSet = new discoteque.discotequeDataSet();
-            this.comandaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comandaTableAdapter = new discoteque.discotequeDataSetTableAdapters.comandaTableAdapter();
             this.lblid = new System.Windows.Forms.Label();
             this.lblA = new System.Windows.Forms.Label();
-            this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblTotal = new MetroFramework.Controls.MetroLabel();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comandaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comandaTableAdapter = new discoteque.discotequeDataSetTableAdapters.comandaTableAdapter();
+            this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
+            this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
+            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comandaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -113,20 +114,6 @@
             this.lblN.Size = new System.Drawing.Size(0, 13);
             this.lblN.TabIndex = 13;
             // 
-            // discotequeDataSet
-            // 
-            this.discotequeDataSet.DataSetName = "discotequeDataSet";
-            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // comandaBindingSource
-            // 
-            this.comandaBindingSource.DataMember = "comanda";
-            this.comandaBindingSource.DataSource = this.discotequeDataSet;
-            // 
-            // comandaTableAdapter
-            // 
-            this.comandaTableAdapter.ClearBeforeFill = true;
-            // 
             // lblid
             // 
             this.lblid.AutoSize = true;
@@ -143,15 +130,6 @@
             this.lblA.Size = new System.Drawing.Size(0, 13);
             this.lblA.TabIndex = 16;
             // 
-            // atencionBindingSource
-            // 
-            this.atencionBindingSource.DataMember = "atencion";
-            this.atencionBindingSource.DataSource = this.discotequeDataSet;
-            // 
-            // atencionTableAdapter
-            // 
-            this.atencionTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -159,14 +137,24 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Producto,
-            this.Precio});
-            this.dataGridView1.DataSource = this.atencionBindingSource;
+            this.nombreProductoDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.productoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(23, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(245, 294);
             this.dataGridView1.TabIndex = 17;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "producto";
+            this.productoBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // discotequeDataSet
+            // 
+            this.discotequeDataSet.DataSetName = "discotequeDataSet";
+            this.discotequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // timer1
             // 
@@ -192,19 +180,36 @@
             this.lblTotal.Size = new System.Drawing.Size(0, 0);
             this.lblTotal.TabIndex = 19;
             // 
-            // Producto
+            // comandaBindingSource
             // 
-            this.Producto.DataPropertyName = "nombreProducto";
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
+            this.comandaBindingSource.DataMember = "comanda";
+            this.comandaBindingSource.DataSource = this.discotequeDataSet;
             // 
-            // Precio
+            // comandaTableAdapter
             // 
-            this.Precio.DataPropertyName = "precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
+            this.comandaTableAdapter.ClearBeforeFill = true;
+            // 
+            // atencionTableAdapter
+            // 
+            this.atencionTableAdapter.ClearBeforeFill = true;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // nombreProductoDataGridViewTextBoxColumn
+            // 
+            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "nombreProducto";
+            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
+            this.nombreProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Atenciones2
             // 
@@ -226,10 +231,10 @@
             this.Load += new System.EventHandler(this.Atenciones_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comandaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,7 +253,6 @@
         private System.Windows.Forms.ToolStripMenuItem finalizarAtencionToolStripMenuItem;
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Label lblA;
-        private System.Windows.Forms.BindingSource atencionBindingSource;
         private discotequeDataSetTableAdapters.atencionTableAdapter atencionTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStrip getProductosByAtencionToolStrip;
@@ -258,7 +262,9 @@
         private System.Windows.Forms.Timer timer1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private discotequeDataSetTableAdapters.productoTableAdapter productoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }
