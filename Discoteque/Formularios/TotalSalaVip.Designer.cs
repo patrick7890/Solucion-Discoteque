@@ -1,6 +1,6 @@
-﻿namespace discoteque
+﻿namespace discoteque.Formularios
 {
-    partial class ListadoDeAtenciones
+    partial class TotalSalaVip
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
-            this.btnEliminar = new MetroFramework.Controls.MetroButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
@@ -63,10 +63,11 @@
             this.nombreusuarioDataGridViewTextBoxColumn,
             this.desctipoSalaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.atencionBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 72);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(947, 371);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Size = new System.Drawing.Size(945, 224);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idatencionDataGridViewTextBoxColumn
             // 
@@ -137,34 +138,37 @@
             // 
             this.atencionTableAdapter.ClearBeforeFill = true;
             // 
-            // btnEliminar
+            // label1
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(1014, 168);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseSelectable = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(305, 328);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Total: ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // ListadoDeAtenciones
+            // TotalSalaVip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 480);
-            this.Controls.Add(this.btnEliminar);
+            this.ClientSize = new System.Drawing.Size(1015, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "ListadoDeAtenciones";
-            this.Text = "ListadoDeAtenciones";
-            this.Load += new System.EventHandler(this.ListadoDeAtenciones_Load);
+            this.Name = "TotalSalaVip";
+            this.Text = "TotalSalaVip";
+            this.Load += new System.EventHandler(this.TotalSalaVip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.DataGridView dataGridView1;
         private discotequeDataSet discotequeDataSet;
         private System.Windows.Forms.BindingSource atencionBindingSource;
@@ -178,6 +182,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoSalaidtipoSalaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreusuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn desctipoSalaDataGridViewTextBoxColumn;
-        private MetroFramework.Controls.MetroButton btnEliminar;
+        private System.Windows.Forms.Label label1;
     }
 }

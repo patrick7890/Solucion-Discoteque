@@ -83,7 +83,7 @@
             this.txtPass.Location = new System.Drawing.Point(135, 133);
             this.txtPass.MaxLength = 32767;
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '\0';
+            this.txtPass.PasswordChar = '*';
             this.txtPass.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPass.SelectedText = "";
             this.txtPass.SelectionLength = 0;

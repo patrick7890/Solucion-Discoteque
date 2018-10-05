@@ -75,14 +75,25 @@ namespace discoteque
 
         private void Atenciones_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.atencion' Puede moverla o quitarla según sea necesario.
+            this.atencionTableAdapter.AtencionUF(this.discotequeDataSet.atencion,DateTime.Today.ToString(),DateTime.Today.AddDays(1).ToString(), ida);
             // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.comanda' Puede moverla o quitarla según sea necesario.
             this.comandaTableAdapter.Fill(this.discotequeDataSet.comanda);
-
+            timer1.Enabled = true;
+            timer1.Interval = 5000;
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            this.atencionTableAdapter.AtencionUF(this.discotequeDataSet.atencion, DateTime.Today.ToString(), DateTime.Today.AddDays(1).ToString(), ida);
+
+
         }
     }
 }

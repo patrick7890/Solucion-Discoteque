@@ -51,12 +51,15 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.btnListarMesero = new MetroFramework.Controls.MetroButton();
             this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
+            this.comandaproductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comanda_productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.comanda_productoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comandaproductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // atencionBindingSource
@@ -87,7 +90,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(14, 67);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(101, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(100, 19);
             this.metroLabel2.TabIndex = 3;
             this.metroLabel2.Text = "Menos Vendido";
             // 
@@ -96,7 +99,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(7, 30);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(85, 19);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Mas Vendido";
             // 
@@ -155,7 +158,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(14, 85);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(115, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(113, 19);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Fecha de Termino";
             // 
@@ -275,6 +278,15 @@
             // 
             this.atencionTableAdapter.ClearBeforeFill = true;
             // 
+            // comandaproductoBindingSource
+            // 
+            this.comandaproductoBindingSource.DataMember = "comanda_producto";
+            this.comandaproductoBindingSource.DataSource = this.discotequeDataSet;
+            // 
+            // comanda_productoTableAdapter
+            // 
+            this.comanda_productoTableAdapter.ClearBeforeFill = true;
+            // 
             // ListaComanda2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,6 +309,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comandaproductoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,5 +337,7 @@
         private discotequeDataSet discotequeDataSet;
         private System.Windows.Forms.BindingSource atencionBindingSource;
         private discotequeDataSetTableAdapters.atencionTableAdapter atencionTableAdapter;
+        private System.Windows.Forms.BindingSource comandaproductoBindingSource;
+        private discotequeDataSetTableAdapters.comanda_productoTableAdapter comanda_productoTableAdapter;
     }
 }

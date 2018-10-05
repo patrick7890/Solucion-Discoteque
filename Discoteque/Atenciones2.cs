@@ -54,8 +54,11 @@ namespace discoteque
 
         private void Atenciones_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Login l = new Login();
-            //l.Show();
+            timer1.Enabled = false;
+            int total = int.Parse(atencionTableAdapter.TotalAPagar(idat).ToString());
+            int p =(int) Math.Round(total*0.1);
+            atencionTableAdapter.Updatefactura(p,idat);
+            MessageBox.Show("Atencion Finalizada Total a pagar" + lbltp.Text);
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -84,7 +87,8 @@ namespace discoteque
 
         private void finalizarAtencionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            atencionTableAdapter.Updatefactura(1, idat);
+            timer1.Enabled = false;
+            this.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -98,9 +102,19 @@ namespace discoteque
 
                 productoTableAdapter.GetProductoByAtencio(discotequeDataSet.producto, idat);
             }
-            
+            int total = int.Parse(atencionTableAdapter.TotalAPagar(idat).ToString());
 
-            lblTotal.Text= atencionTableAdapter.TotalAPagar(idat).ToString();
+            int propina = (int) Math.Round(total * 0.1);
+            lblConsumo.Text="Consumo :"+ total.ToString();
+            lblPropina.Text =propina.ToString();
+            lbltp.Text = "Total+Propina : " + (total+propina).ToString();
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

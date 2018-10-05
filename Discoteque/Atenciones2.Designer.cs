@@ -32,25 +32,27 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.atencionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearAtencionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarComandaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalizarAtencionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblN = new System.Windows.Forms.Label();
             this.lblid = new System.Windows.Forms.Label();
             this.lblA = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.discotequeDataSet = new discoteque.discotequeDataSet();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblTotal = new MetroFramework.Controls.MetroLabel();
             this.comandaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comandaTableAdapter = new discoteque.discotequeDataSetTableAdapters.comandaTableAdapter();
             this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
             this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
             this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblPropina = new System.Windows.Forms.Label();
+            this.lbltp = new System.Windows.Forms.Label();
+            this.lblConsumo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
@@ -75,7 +77,6 @@
             // 
             this.atencionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearAtencionToolStripMenuItem,
-            this.eliminarToolStripMenuItem,
             this.agregarComandaToolStripMenuItem});
             this.atencionToolStripMenuItem.Name = "atencionToolStripMenuItem";
             this.atencionToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
@@ -87,12 +88,6 @@
             this.crearAtencionToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.crearAtencionToolStripMenuItem.Text = "Crear Atencion";
             this.crearAtencionToolStripMenuItem.Click += new System.EventHandler(this.crearAtencionToolStripMenuItem_Click);
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // agregarComandaToolStripMenuItem
             // 
@@ -148,6 +143,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(245, 294);
             this.dataGridView1.TabIndex = 17;
             // 
+            // nombreProductoDataGridViewTextBoxColumn
+            // 
+            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "nombreProducto";
+            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
+            this.nombreProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // productoBindingSource
             // 
             this.productoBindingSource.DataMember = "producto";
@@ -162,16 +171,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(357, 131);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(63, 25);
-            this.metroLabel1.TabIndex = 18;
-            this.metroLabel1.Text = "TOTAL:";
             // 
             // lblTotal
             // 
@@ -204,27 +203,57 @@
             this.atencionBindingSource.DataMember = "atencion";
             this.atencionBindingSource.DataSource = this.discotequeDataSet;
             // 
-            // nombreProductoDataGridViewTextBoxColumn
+            // lblPropina
             // 
-            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "nombreProducto";
-            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
-            this.nombreProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lblPropina.AutoSize = true;
+            this.lblPropina.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropina.Location = new System.Drawing.Point(458, 179);
+            this.lblPropina.Name = "lblPropina";
+            this.lblPropina.Size = new System.Drawing.Size(26, 29);
+            this.lblPropina.TabIndex = 20;
+            this.lblPropina.Text = "0";
             // 
-            // precioDataGridViewTextBoxColumn
+            // lbltp
             // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lbltp.AutoSize = true;
+            this.lbltp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltp.Location = new System.Drawing.Point(352, 218);
+            this.lbltp.Name = "lbltp";
+            this.lbltp.Size = new System.Drawing.Size(197, 29);
+            this.lbltp.TabIndex = 21;
+            this.lbltp.Text = "Total+Propina : 0";
+            // 
+            // lblConsumo
+            // 
+            this.lblConsumo.AutoSize = true;
+            this.lblConsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsumo.Location = new System.Drawing.Point(352, 150);
+            this.lblConsumo.Name = "lblConsumo";
+            this.lblConsumo.Size = new System.Drawing.Size(141, 29);
+            this.lblConsumo.TabIndex = 22;
+            this.lblConsumo.Text = "Consumo :0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(352, 179);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 29);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Propina :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Atenciones2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 438);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblConsumo);
+            this.Controls.Add(this.lbltp);
+            this.Controls.Add(this.lblPropina);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblA);
             this.Controls.Add(this.lblid);
@@ -252,7 +281,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem atencionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearAtencionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.Label lblN;
         private System.Windows.Forms.ToolStripMenuItem agregarComandaToolStripMenuItem;
         private discotequeDataSet discotequeDataSet;
@@ -263,17 +291,16 @@
         private System.Windows.Forms.Label lblA;
         private discotequeDataSetTableAdapters.atencionTableAdapter atencionTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStrip getProductosByAtencionToolStrip;
-        private System.Windows.Forms.ToolStripLabel idToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox idToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton getProductosByAtencionToolStripButton;
         private System.Windows.Forms.Timer timer1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblTotal;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private discotequeDataSetTableAdapters.productoTableAdapter productoTableAdapter;
         private System.Windows.Forms.BindingSource atencionBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblPropina;
+        private System.Windows.Forms.Label lbltp;
+        private System.Windows.Forms.Label lblConsumo;
+        private System.Windows.Forms.Label label1;
     }
 }

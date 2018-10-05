@@ -5,30 +5,49 @@
       <xsd:import schemaLocation="http://localhost:8080/discoteque/UsuarioWS?xsd=1" namespace="http://webservice/" />
     </xsd:schema>
   </types>
-  <message name="idUsuario">
-    <part name="parameters" element="tns:idUsuario" />
-  </message>
-  <message name="idUsuarioResponse">
-    <part name="parameters" element="tns:idUsuarioResponse" />
-  </message>
   <message name="tipoUsuario">
     <part name="parameters" element="tns:tipoUsuario" />
   </message>
   <message name="tipoUsuarioResponse">
     <part name="parameters" element="tns:tipoUsuarioResponse" />
   </message>
+  <message name="idUsuario">
+    <part name="parameters" element="tns:idUsuario" />
+  </message>
+  <message name="idUsuarioResponse">
+    <part name="parameters" element="tns:idUsuarioResponse" />
+  </message>
+  <message name="agregarUsario">
+    <part name="parameters" element="tns:agregarUsario" />
+  </message>
+  <message name="agregarUsarioResponse">
+    <part name="parameters" element="tns:agregarUsarioResponse" />
+  </message>
   <portType name="UsuarioWS">
-    <operation name="idUsuario">
-      <input wsam:Action="http://webservice/UsuarioWS/idUsuarioRequest" message="tns:idUsuario" />
-      <output wsam:Action="http://webservice/UsuarioWS/idUsuarioResponse" message="tns:idUsuarioResponse" />
-    </operation>
     <operation name="tipoUsuario">
       <input wsam:Action="http://webservice/UsuarioWS/tipoUsuarioRequest" message="tns:tipoUsuario" />
       <output wsam:Action="http://webservice/UsuarioWS/tipoUsuarioResponse" message="tns:tipoUsuarioResponse" />
     </operation>
+    <operation name="idUsuario">
+      <input wsam:Action="http://webservice/UsuarioWS/idUsuarioRequest" message="tns:idUsuario" />
+      <output wsam:Action="http://webservice/UsuarioWS/idUsuarioResponse" message="tns:idUsuarioResponse" />
+    </operation>
+    <operation name="agregarUsario">
+      <input wsam:Action="http://webservice/UsuarioWS/agregarUsarioRequest" message="tns:agregarUsario" />
+      <output wsam:Action="http://webservice/UsuarioWS/agregarUsarioResponse" message="tns:agregarUsarioResponse" />
+    </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="tipoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="idUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -38,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="tipoUsuario">
+    <operation name="agregarUsario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -45,17 +45,11 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
@@ -156,6 +150,12 @@
     <Compile Include="Formularios\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AgregarUsuario.Designer.cs">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CrearAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,17 +168,23 @@
     <Compile Include="Formularios\CrearComanda.Designer.cs">
       <DependentUpon>CrearComanda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\PagarMesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PagarMesero.Designer.cs">
+      <DependentUpon>PagarMesero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TotalSalaVip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TotalSalaVip.Designer.cs">
+      <DependentUpon>TotalSalaVip.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaBodega.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListaBodega.Designer.cs">
       <DependentUpon>ListaBodega.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListaComanda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListaComanda.Designer.cs">
-      <DependentUpon>ListaComanda.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaComanda2.cs">
       <SubType>Form</SubType>
@@ -243,17 +249,23 @@
     <EmbeddedResource Include="Formularios\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearAtencion.resx">
       <DependentUpon>CrearAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearComanda.resx">
       <DependentUpon>CrearComanda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PagarMesero.resx">
+      <DependentUpon>PagarMesero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TotalSalaVip.resx">
+      <DependentUpon>TotalSalaVip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaBodega.resx">
       <DependentUpon>ListaBodega.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListaComanda.resx">
-      <DependentUpon>ListaComanda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaComanda2.resx">
       <DependentUpon>ListaComanda2.cs</DependentUpon>
@@ -307,6 +319,9 @@
     <None Include="Connected Services\ProductoSevice\ProductoWS.wsdl" />
     <None Include="Connected Services\ProductoSevice\ProductoWS.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioService\discoteque.UsuarioService.agregarUsarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioService\discoteque.UsuarioService.idUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

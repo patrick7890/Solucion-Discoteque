@@ -45,6 +45,7 @@ namespace discoteque
             else if(logeado == 2){
                 this.Hide();
                 VistaAdmin Form2 = new VistaAdmin();
+                    Form2.idAdmin = id;
                 Form2.Show();
 
             }else

@@ -12,8 +12,10 @@ namespace discoteque
 {
     public partial class VistaAdmin : MetroFramework.Forms.MetroForm
     {
+        public int idAdmin;
         public VistaAdmin()
         {
+
             InitializeComponent();
         }
 
@@ -67,11 +69,32 @@ namespace discoteque
             l.Show();
         }
 
-        private void administrarAtencionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+       
 
+        private void administrarAtencionToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ListaComanda2 com = new ListaComanda2();
+            com.Show();
+        }
+
+        private void eliminarAtencionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             ListadoDeAtenciones l = new ListadoDeAtenciones();
             l.Show();
+        }
+
+        private void crearAtencionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formularios.CrearAtencion Form1 = new Formularios.CrearAtencion();
+            Form1.idUsu = idAdmin;
+            Form1.Show();
+        }
+
+        private void agregarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Formularios.AgregarUsuario Form1 = new Formularios.AgregarUsuario();
+            Form1.MdiParent = this;
+            Form1.Show();
 
         }
     }

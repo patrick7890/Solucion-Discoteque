@@ -26,7 +26,7 @@ namespace discoteque.Formularios
             // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.tipoproducto' Puede moverla o quitarla según sea necesario.
             this.tipoproductoTableAdapter.Fill(this.discotequeDataSet.tipoproducto);
             // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.discotequeDataSet.producto);
+            this.productoTableAdapter.ProductosEnVenta(this.discotequeDataSet.producto);
 
         }
 
@@ -42,7 +42,7 @@ namespace discoteque.Formularios
 
             int idTipo = cboTipoProducto.SelectedIndex +1;
 
-
+            
             this.productoTableAdapter.enVenta(this.discotequeDataSet.producto,idTipo);
             
 

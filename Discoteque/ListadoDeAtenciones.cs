@@ -12,6 +12,8 @@ namespace discoteque
 {
     public partial class ListadoDeAtenciones : MetroFramework.Forms.MetroForm
     {
+        DateTime fechaHoy = System.DateTime.Today;
+        DateTime f = System.DateTime.Today.AddDays(1);
         public ListadoDeAtenciones()
         {
             InitializeComponent();
@@ -21,8 +23,7 @@ namespace discoteque
         {
             // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.atencion' Puede moverla o quitarla según sea necesario.
 
-            DateTime fechaHoy = System.DateTime.Today;
-            DateTime f = fechaHoy.AddDays(1);
+           
             this.atencionTableAdapter.FiltroFecha(this.discotequeDataSet.atencion, fechaHoy.ToString(), f.ToString());
 
 
@@ -63,7 +64,8 @@ namespace discoteque
                 int.TryParse(idAtencion, out ida);
 
                 this.atencionTableAdapter.DeleteAtencion(ida);
-
+                MessageBox.Show("Atencion Eliminada");
+                this.atencionTableAdapter.FiltroFecha(this.discotequeDataSet.atencion, fechaHoy.ToString(), f.ToString());
 
             }
             catch (Exception)

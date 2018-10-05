@@ -34,7 +34,12 @@
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atencionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarAtencionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarAtencionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearAtencionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +47,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productoToolStripMenuItem,
-            this.cerrarSesionToolStripMenuItem});
+            this.atencionToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem,
+            this.usuarioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(603, 24);
@@ -54,8 +61,7 @@
             this.productoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
             this.listarToolStripMenuItem,
-            this.bodegaToolStripMenuItem,
-            this.administrarAtencionToolStripMenuItem});
+            this.bodegaToolStripMenuItem});
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
             this.productoToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.productoToolStripMenuItem.Text = "Producto";
@@ -88,12 +94,51 @@
             this.cerrarSesionToolStripMenuItem.Text = "cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
+            // atencionToolStripMenuItem
+            // 
+            this.atencionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearAtencionToolStripMenuItem,
+            this.eliminarAtencionesToolStripMenuItem,
+            this.administrarAtencionToolStripMenuItem});
+            this.atencionToolStripMenuItem.Name = "atencionToolStripMenuItem";
+            this.atencionToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.atencionToolStripMenuItem.Text = "Atencion";
+            // 
             // administrarAtencionToolStripMenuItem
             // 
             this.administrarAtencionToolStripMenuItem.Name = "administrarAtencionToolStripMenuItem";
             this.administrarAtencionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.administrarAtencionToolStripMenuItem.Text = "Administrar Atencion";
-            this.administrarAtencionToolStripMenuItem.Click += new System.EventHandler(this.administrarAtencionToolStripMenuItem_Click);
+            this.administrarAtencionToolStripMenuItem.Click += new System.EventHandler(this.administrarAtencionToolStripMenuItem_Click_1);
+            // 
+            // eliminarAtencionesToolStripMenuItem
+            // 
+            this.eliminarAtencionesToolStripMenuItem.Name = "eliminarAtencionesToolStripMenuItem";
+            this.eliminarAtencionesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.eliminarAtencionesToolStripMenuItem.Text = "Eliminar Atenciones";
+            this.eliminarAtencionesToolStripMenuItem.Click += new System.EventHandler(this.eliminarAtencionesToolStripMenuItem_Click);
+            // 
+            // crearAtencionToolStripMenuItem
+            // 
+            this.crearAtencionToolStripMenuItem.Name = "crearAtencionToolStripMenuItem";
+            this.crearAtencionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.crearAtencionToolStripMenuItem.Text = "Crear Atencion";
+            this.crearAtencionToolStripMenuItem.Click += new System.EventHandler(this.crearAtencionToolStripMenuItem_Click);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarToolStripMenuItem1});
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            // 
+            // agregarToolStripMenuItem1
+            // 
+            this.agregarToolStripMenuItem1.Name = "agregarToolStripMenuItem1";
+            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.agregarToolStripMenuItem1.Text = "Agregar";
+            this.agregarToolStripMenuItem1.Click += new System.EventHandler(this.agregarToolStripMenuItem1_Click);
             // 
             // VistaAdmin
             // 
@@ -122,6 +167,11 @@
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bodegaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atencionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarAtencionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarAtencionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearAtencionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem1;
     }
 }
