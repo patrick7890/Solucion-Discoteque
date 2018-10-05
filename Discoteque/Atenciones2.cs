@@ -77,26 +77,28 @@ namespace discoteque
 
         private void Atenciones_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.GetProductoByAtencio(this.discotequeDataSet.producto, idat);
-            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.atencion' Puede moverla o quitarla según sea necesario.
-            //this.atencionTableAdapter.GetProductosByAtencion(this.discotequeDataSet.atencion, idat);
             lblA.Text = idat.ToString();
-            // TODO: esta línea de código carga datos en la tabla 'discotequeDataSet.comanda' Puede moverla o quitarla según sea necesario.
-            this.comandaTableAdapter.Fill(this.discotequeDataSet.comanda);
             timer1.Interval = 5000;
 
         }
 
         private void finalizarAtencionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            atencionTableAdapter.Updatefactura(0, idat);
+            atencionTableAdapter.Updatefactura(1, idat);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            try
+            {
+                productoTableAdapter.GetProductoByAtencio(discotequeDataSet.producto, idat);
+            }
+            catch (Exception)
+            {
 
-            productoTableAdapter.GetProductoByAtencio(discotequeDataSet.producto, idat);
+                productoTableAdapter.GetProductoByAtencio(discotequeDataSet.producto, idat);
+            }
+            
 
             lblTotal.Text= atencionTableAdapter.TotalAPagar(idat).ToString();
         }

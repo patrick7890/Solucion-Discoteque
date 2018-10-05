@@ -66,5 +66,13 @@ namespace discoteque
             Login l = new Login();
             l.Show();
         }
+
+        private void administrarAtencionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            ListadoDeAtenciones l = new ListadoDeAtenciones();
+            l.Show();
+
+        }
     }
 }

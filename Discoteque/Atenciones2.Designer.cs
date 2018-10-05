@@ -48,6 +48,7 @@
             this.comandaTableAdapter = new discoteque.discotequeDataSetTableAdapters.comandaTableAdapter();
             this.atencionTableAdapter = new discoteque.discotequeDataSetTableAdapters.atencionTableAdapter();
             this.productoTableAdapter = new discoteque.discotequeDataSetTableAdapters.productoTableAdapter();
+            this.atencionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
@@ -55,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comandaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -197,6 +199,11 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
+            // atencionBindingSource
+            // 
+            this.atencionBindingSource.DataMember = "atencion";
+            this.atencionBindingSource.DataSource = this.discotequeDataSet;
+            // 
             // nombreProductoDataGridViewTextBoxColumn
             // 
             this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "nombreProducto";
@@ -235,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discotequeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comandaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atencionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,6 +272,7 @@
         private MetroFramework.Controls.MetroLabel lblTotal;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private discotequeDataSetTableAdapters.productoTableAdapter productoTableAdapter;
+        private System.Windows.Forms.BindingSource atencionBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
